@@ -402,6 +402,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .bg-\[url\(\'\.\.\/images\/header\/carfinale\.png\'\)\] {
+    background-image: url('../images/header/carfinale.png');
+  }
   .bg-\[url\(\'\/images\/header\/carfinale\.png\'\)\] {
     background-image: url('/images/header/carfinale.png');
   }
@@ -741,6 +744,41 @@
   .md\:bg-\[\#FDB713\] {
     @media (width >= 48rem) {
       background-color: #FDB713;
+    }
+  }
+  .md\:bg-\[url\(\'\.\.\/\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('../');
+    }
+  }
+  .md\:bg-\[url\(\'\.\.\/images\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('../images');
+    }
+  }
+  .md\:bg-\[url\(\'\.\.\/images\/\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('../images/');
+    }
+  }
+  .md\:bg-\[url\(\'\.\.\/images\/header\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('../images/header');
+    }
+  }
+  .md\:bg-\[url\(\'\.\.\/images\/header\/\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('../images/header/');
+    }
+  }
+  .md\:bg-\[url\(\'\.\.\/images\/header\/carfinale\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('../images/header/carfinale');
+    }
+  }
+  .md\:bg-\[url\(\'\.\.\/images\/header\/carfinale\.png\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('../images/header/carfinale.png');
     }
   }
   .md\:bg-\[url\(\'\/images\/header\/carfinale\.png\'\)\] {

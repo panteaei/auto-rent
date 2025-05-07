@@ -405,20 +405,11 @@
   .bg-\[url\(\'\.\.\/images\/header\/carfinale\.png\'\)\] {
     background-image: url('../images/header/carfinale.png');
   }
-  .bg-\[url\(\'\/images\/header\/carfinale\.png\'\)\] {
-    background-image: url('/images/header/carfinale.png');
+  .bg-\[url\(\'\.\.\/public\/images\/header\/carfinale\.png\'\)\] {
+    background-image: url('../public/images/header/carfinale.png');
   }
-  .bg-\[url\(\'\/pimages\/header\/carfinale\.png\'\)\] {
-    background-image: url('/pimages/header/carfinale.png');
-  }
-  .bg-\[url\(\'images\/header\/carfinale\.png\'\)\] {
-    background-image: url('images/header/carfinale.png');
-  }
-  .bg-\[url\(\'public\/images\/header\/carfinale\.png\'\)\] {
-    background-image: url('public/images/header/carfinale.png');
-  }
-  .bg-\[url\(\'publlic\/images\/header\/carfinale\.png\'\)\] {
-    background-image: url('publlic/images/header/carfinale.png');
+  .bg-\[url\(\'\.\.public\/images\/header\/carfinale\.png\'\)\] {
+    background-image: url('..public/images/header/carfinale.png');
   }
   .bg-contain {
     background-size: contain;
@@ -746,54 +737,14 @@
       background-color: #FDB713;
     }
   }
-  .md\:bg-\[url\(\'\.\.\/\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('../');
-    }
-  }
-  .md\:bg-\[url\(\'\.\.\/images\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('../images');
-    }
-  }
-  .md\:bg-\[url\(\'\.\.\/images\/\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('../images/');
-    }
-  }
-  .md\:bg-\[url\(\'\.\.\/images\/header\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('../images/header');
-    }
-  }
-  .md\:bg-\[url\(\'\.\.\/images\/header\/\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('../images/header/');
-    }
-  }
-  .md\:bg-\[url\(\'\.\.\/images\/header\/carfinale\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('../images/header/carfinale');
-    }
-  }
   .md\:bg-\[url\(\'\.\.\/images\/header\/carfinale\.png\'\)\] {
     @media (width >= 48rem) {
       background-image: url('../images/header/carfinale.png');
     }
   }
-  .md\:bg-\[url\(\'\/images\/header\/carfinale\.png\'\)\] {
+  .md\:bg-\[url\(\'\.\.\/public\/images\/header\/carfinale\.png\'\)\] {
     @media (width >= 48rem) {
-      background-image: url('/images/header/carfinale.png');
-    }
-  }
-  .md\:bg-\[url\(\'images\/header\/carfinale\.png\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('images/header/carfinale.png');
-    }
-  }
-  .md\:bg-\[url\(\'public\/images\/header\/carfinale\.png\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('public/images/header/carfinale.png');
+      background-image: url('../public/images/header/carfinale.png');
     }
   }
   .md\:bg-none {
@@ -1007,62 +958,62 @@
 }
 @font-face {
   font-family: "Estedad-black";
-  src: url("/fonts/woff2/Estedad-Black.woff2") format("woff2");
+  src: url("../public/fonts/woff2/Estedad-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Estedad-bold";
-  src: url("/fonts/woff2/Estedad-Bold.woff2") format("woff2");
+  src: url("../public/fonts/woff2/Estedad-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Estedad-ExtraBold";
-  src: url("/fonts/woff2/Estedad-ExtraBold.woff2") format("woff2");
+  src: url("../public/fonts/woff2/Estedad-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Estedad-ExtraLight";
-  src: url("/fonts/woff2/Estedad-ExtraLight.woff2") format("woff2");
+  src: url("../public/fonts/woff2/Estedad-ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Estedad-light";
-  src: url("/fonts/woff2/Estedad-Light.woff2") format("woff2");
+  src: url("../public/fonts/woff2/Estedad-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Estedad-medium";
-  src: url("/fonts/woff2/Estedad-Medium.woff2") format("woff2");
+  src: url("../public/fonts/woff2/Estedad-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Estedad-regular";
-  src: url("/fonts/woff2/Estedad-Regular.woff2") format("woff2");
+  src: url("../public/fonts/woff2/Estedad-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Estedad-semibold";
-  src: url("/fonts/woff2/Estedad-SemiBold.woff2") format("woff2");
+  src: url("../public/fonts/woff2/Estedad-SemiBold.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Estedad-thin";
-  src: url("/fonts/woff2/Estedad-Thin.woff2") format("woff2");
+  src: url("../public/fonts/woff2/Estedad-Thin.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
   font-display: swap;

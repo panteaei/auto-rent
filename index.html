@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto rent</title>
+    <link
+      rel="shortcut icon"
+      href="./public/images/favicon/icons8-encashment-car-64.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="w-full h-full">
+    <header class="w-full flex justify-center">
+      <!-- container  -->
+      <div
+        class="w-[1440px] xl:h-[683px] md:h-[500px] md:bg-[url('/images/header/carfinale.png')] bg-no-repeat lg:bg-cover bg-contain relative"
+      >
+        <!-- nav bar  -->
+        <nav
+          class="md:h-auto lg:h-24 xl:w-[1224px] w-full bg-white xl:rounded-b-[16px] rounded-none md:fixed md:top-0 md:right-0 md:left-0 lg:mx-[auto] flex justify-between items-center lg:px-8 md:py-[18.5px] py-3 md:px-6 px-4 mb-1.5 md:mb-0 md:shadow-2xs"
+        >
+          <!-- hamb icon for mobile -->
+          <div class="md:hidden block cursor-pointer " id="hamb">
+            <img
+              src="./public/images/header/hamburgerblue.png"
+              alt="hamb icon"
+            />
+          </div>
+          <!-- auto rent logo -->
+          <div class="w-[100px] md:w-[140px] lg:w-auto">
+            <img src="./public/images/header/Logo.png" alt="auto rent logo" />
+          </div>
+
+          <ul
+          id="menu"
+            class="flex flex-col md:flex-row md:items-center lg:gap-10 md:gap-3.5 text-sm lg:text-[16px] lg:leading-[100%] lg:font-estedad-light text-[#353535] absolute -right-full top-0 z-[1000] transition md:static bg-white h-screen md:h-auto xs:w-[60%] sm:w-[50%] md:w-auto p-4 md:p-0"
+          >
+            <!-- first li is for mobile  -->
+            <li
+              class="md:hidden flex justify-between items-center border-b border-b-blue-100 pb-3 mb-3"
+            >
+              <img
+              id="xIcon"
+                class="w-4 h-4"
+                src="./public/images/header/icons8-x-24.png"
+                alt="x icon"
+              />
+              <a href="#"
+                ><img
+                  class="w-10 h-10"
+                  src="./public/images/header/responsivelogo.png"
+                  alt="logo"
+              /></a>
+            </li>
+            <li
+              class="outline-0 order-2 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 transition-colors"
+            >
+              <a
+                class="w-full h-full md:w-auto md:h-auto flex items-center gap-3 md:block md:gap-0"
+                href="#"
+              >
+                <img
+                  class="md:hidden block"
+                  src="./public/images/header/smart-car.png"
+                  alt="car icon"
+                />
+                رزرو خودرو</a
+              >
+            </li>
+            <li
+              class="order-3 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 transition-colors"
+            >
+              <a
+                class="w-full h-full md:w-auto md:h-auto flex items-center gap-3 md:block md:gap-0"
+                href="#"
+              >
+                <img
+                  class="md:hidden block"
+                  src="./public/images/header/khadamat.png"
+                  alt="آیکون خدمات"
+                />
+                خدمات ما</a
+              >
+            </li>
+            <li
+              class="order-4 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 transition-colors"
+            >
+              <a
+                class="w-full h-full md:w-auto md:h-auto flex items-center gap-3 md:block md:gap-0"
+                href="#"
+              >
+                <img
+                  class="md:hidden block"
+                  src="./public/images/header/blog.png"
+                  alt="blog icon"
+                />
+                بلاگ</a
+              >
+            </li>
+            <li
+              class="order-5 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 transition-colors"
+            >
+              <a
+                class="w-full h-full md:w-auto md:h-auto flex items-center gap-3 md:block md:gap-0"
+                href="#"
+              >
+                <img
+                  class="md:hidden block"
+                  src="./public/images/header/group.png"
+                  alt="درباره ما"
+                />
+                درباره ما</a
+              >
+            </li>
+            <li
+              class="order-6 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 transition-colors"
+            >
+              <a
+                class="w-full h-full md:w-auto md:h-auto flex items-center gap-3 md:block md:gap-0"
+                href="#"
+              >
+                <img
+                  class="md:hidden block"
+                  src="./public/images/header/call.png"
+                  alt="call icon"
+                />
+                تماس با ما</a
+              >
+            </li>
+            <li class="order-1 md:order-none hidden md:block">
+              <form action="#" method="get" class="w-6 h-6">
+                <input type="search" class="hidden" />
+                <button class="w-6 h-6 cursor-pointer" type="submit">
+                  <img
+                    class="w-6 h-6"
+                    src="./public/images/header/search-outline.png"
+                    alt="search button"
+                  />
+                </button>
+              </form>
+            </li>
+          </ul>
+          <a
+            href="#"
+            class="flex items-center gap-1 md:gap-0 md:block h-10 md:px-4 md:py-[6px] md:bg-[#194BF0] rounded-lg font-estedad-light"
+          >
+            <span
+              class="hidden md:inline-block text-[16px] md:text-white leading-6"
+              >ورود / ثبت‌نام</span
+            >
+            <span class="inline-block md:hidden pb-1 text-sm text-[#727272]"
+              >نام کاربری</span
+            >
+            <img
+              class="inline-block md:hidden w-5 h-5"
+              src="./public/images/header/login.png"
+              alt="login icon"
+            />
+          </a>
+        </nav>
+        <!-- search btn and reserve btn for mobile wrapper -->
+        <div
+          class="flex justify-between items-center md:hidden w-full h-[50px] px-4 pb-5 border-b border-b-blue-100"
+        >
+          <!-- search content -->
+
+          <div class="group-search">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+              <g>
+                <path
+                  d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                ></path>
+              </g>
+            </svg>
+            <input class="input" type="search" placeholder="جستجو..." />
+          </div>
+          <!-- reserve car content -->
+          <a
+            class="text-xs font-estedad-light text-[#05164D] px-4 py-[7px] border border-[#05164D] rounded-[48px] w-auto sm:w-[120px] text-center"
+            href="#"
+            >اجاره خودرو</a
+          >
+          <a href="#">
+            <img
+              class="w-7 sm:w-auto border border-[#05164D] rounded-md p-1"
+              src="./public/images/header/call-calling.png"
+              alt="call icon"
+          /></a>
+        </div>
+        <!-- header content -->
+        <!-- wrapper -->
+        <div
+          class="h-[225px] md:h-auto md:w-full xl:h-[479px] md:mt-[134px] xl:pr-[108px] lg:pr-[80px] md:pr-0 pr-4 xl:pt-[97px] lg:pt-10 md:pt-0 pt-7 md:flex justify-between lg:block bg-[url('/images/header/carfinale.png')] md:bg-none bg-cover bg-no-repeat bg-left"
+        >
+          <!-- content -->
+          <div class="lg:w-[460px] w-[319px] lg:m-0 md:mr-[36px]">
+            <h1
+              class="lg:text-[44px] md:text-[38px] text-[20px] text-[#FDB713] font-estedad-bold md:w-[335px] w-[170px] md:mb-[7px]"
+            >
+              اُتـــو رِنت؛ سریع، آسان و به صرفه
+            </h1>
+            <p
+              class="text-[13px] md:text-[16px] text-white font-estedad-ExtraLight lg:w-full w-[220px] sm:w-[250px]  lg:h-9 lg:block md:hidden block"
+            >
+              سرویس دهنده رزرو خودرو در ایران در کمترین زمان ممکن!
+            </p>
+            <div class="md:flex md:gap-2 md:mt-4">
+              <a
+                class="hidden md:inline-flex md:justify-center md:items-center md:gap-1.5 md:py-2 md:px-4 md:bg-[#FDB713] md:rounded-md font-estedad-regular font-bold"
+                href="#"
+              >
+                <img
+                  src="./public/svgs/header/car.svg"
+                  alt="car icon"
+                  class="w-5 h-5"
+                />
+                رزرو آسان خودرو
+              </a>
+              <a
+                class="hidden md:inline-flex md:justify-center md:items-center md:gap-1.5 md:py-2 md:px-4 lg:border lg:border-white md:bg-[#194BF0] md:rounded-md md:font-estedad-ExtraLight font-bold md:text-white"
+                href="#"
+              >
+                <img
+                  class="md:w-6 md:h-6"
+                  src="./public/images/header/left-arrow-white.png"
+                  alt="arrow left icon"
+                />
+
+                تماس با ما
+              </a>
+              <!--btn for mobile  -->
+              <a
+              class="inline-flex md:hidden justify-center items-center gap-1.5 py-2 px-4 bg-[#FDB713] rounded-lg font-estedad-regular text-[11px] mt-3"
+              href="#"
+            >
+            چگونه در وبسایت، خودرو رزرو کنیم؟
+            <img
+              src="./public/images/header/down-button.png"
+              alt="arrow icon"
+              class="w-4 h-4"
+            />
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="greyBg" class="hidden w-screen h-screen bg-black/45 absolute top-0 right-0 left-0"></div>
+    <script src="./src/header.js"></script>
+  </body>
+</html>

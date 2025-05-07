@@ -1,0 +1,136 @@
+@import "tailwindcss";
+/* Estedad Variable Font Family */
+@font-face {
+  font-family: "Estedad-black";
+  src: url("/fonts/woff2/Estedad-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad-bold";
+  src: url("/fonts/woff2/Estedad-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad-ExtraBold";
+  src: url("/fonts/woff2/Estedad-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad-ExtraLight";
+  src: url("/fonts/woff2/Estedad-ExtraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad-light";
+  src: url("/fonts/woff2/Estedad-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad-medium";
+  src: url("/fonts/woff2/Estedad-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad-regular";
+  src: url("/fonts/woff2/Estedad-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad-semibold";
+  src: url("/fonts/woff2/Estedad-SemiBold.woff2") format("woff2");
+  /* font-weight: 600; */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Estedad-thin";
+  src: url("/fonts/woff2/Estedad-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /*fonts*/
+  --font-estedad-black: "Estedad-black", "sans-serif";
+  --font-estedad-bold: "Estedad-bold", "sans-serif";
+  --font-estedad-ExtraBold: "Estedad-ExtraBold", "sans-serif";
+  --font-estedad-ExtraLight: "Estedad-ExtraLight", "sans-serif";
+  --font-estedad-light: "Estedad-light", "sans-serif";
+  --font-estedad-medium: "Estedad-medium", "sans-serif";
+  --font-estedad-regular: "Estedad-regular", "sans-serif";
+  --font-estedad-semibold: "Estedad-semibold", "sans-serif";
+  --font-estedad-thin: "Estedad-thin", "sans-serif";
+  /*break points*/
+  --breakpoint-xs: 30rem; /*(width >= 30rem) 30rem = 480px*/
+}
+
+/* From Uiverse.io by LightAndy1 */ 
+.group-search {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+  width: 70%;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 2rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
+  color: #9e9ea7;
+  font-family: "Estedad-light";
+  font-size: small;
+}
+
+.input:focus,
+input:hover {
+  outline: none;
+  border-color: rgba(0, 48, 73, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(0 48 73 / 10%);
+}
+
+.icon {
+  position: absolute;
+  right:12px;
+  top: 13px;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}

@@ -36,7 +36,7 @@
 
           <ul
           id="menu"
-            class="flex flex-col md:flex-row md:items-center lg:gap-10 md:gap-3.5 text-sm lg:text-[16px] lg:leading-[100%] lg:font-estedad-light text-[#353535] absolute -right-full top-0 z-[1000] transition md:static bg-white h-screen md:h-auto xs:w-[60%] sm:w-[50%] md:w-auto p-4 md:p-0"
+            class="flex flex-col md:flex-row md:items-center lg:gap-10 md:gap-3.5 text-sm lg:text-[16px] lg:leading-[100%] lg:font-estedad-light text-[#353535] absolute -right-full top-0 z-[1000] transition md:static bg-white h-screen md:h-auto w-[60%] sm:w-[50%] md:w-auto p-4 md:p-0"
           >
             <!-- first li is for mobile  -->
             <li
@@ -152,7 +152,7 @@
               >ورود / ثبت‌نام</span
             >
             <span class="inline-block md:hidden pb-1 text-sm text-[#727272]"
-              >نام کاربری</span
+              >ورود </span
             >
             <img
               class="inline-block md:hidden w-5 h-5"
@@ -179,13 +179,14 @@
           </div>
           <!-- reserve car content -->
           <a
-            class="text-xs font-estedad-light text-[#05164D] px-4 py-[7px] border border-[#05164D] rounded-[48px] w-auto sm:w-[120px] text-center"
+            class="text-xs font-estedad-light text-[#05164D] hover:bg-[#194BF0] hover:border-0 transition-all hover:text-white px-4 py-[7px] border border-[#05164D] rounded-[48px] w-auto sm:w-[120px] text-center"
             href="#"
             >اجاره خودرو</a
           >
-          <a href="#">
+          <!-- calling btn  -->
+          <a href="#" class="hidden xs:block">
             <img
-              class="w-7 sm:w-auto border border-[#05164D] rounded-md p-1"
+              class=" w-7 sm:w-auto border border-[#05164D] rounded-md hover:rounded-xl transition-all p-1"
               src="./public/images/header/call-calling.png"
               alt="call icon"
           /></a>
@@ -203,9 +204,12 @@
               اُتـــو رِنت؛ سریع، آسان و به صرفه
             </h1>
             <p
-              class="text-[13px] md:text-[16px] text-white font-estedad-ExtraLight lg:w-full w-[220px] sm:w-[250px]  lg:h-9 lg:block md:hidden block"
+              class="text-[13px] md:text-[16px] text-white font-estedad-ExtraLight lg:w-full w-[220px] sm:w-[250px]  lg:h-9 lg:block md:hidden xs:block hidden"
             >
               سرویس دهنده رزرو خودرو در ایران در کمترین زمان ممکن!
+            </p>
+            <p class="text-xs font-estedad-light text-white block xs:hidden w-[100px]">
+              رزرو خودرو در کمترین زمان ممکن
             </p>
             <div class="md:flex md:gap-2 md:mt-4">
               <a
@@ -233,12 +237,12 @@
               </a>
               <!--btn for mobile  -->
               <a
-              class="inline-flex md:hidden justify-center items-center gap-1.5 py-2 px-4 bg-[#FDB713] rounded-lg font-estedad-regular text-[11px] mt-3"
+              class="inline-flex md:hidden justify-center items-center gap-1.5 py-2 px-4 bg-[#FDB713] hover:bg-amber-300 transition-all rounded-[48px] font-estedad-regular text-[11px] mt-3"
               href="#"
             >
-            چگونه در وبسایت، خودرو رزرو کنیم؟
+           تماس با ما
             <img
-              src="./public/images/header/down-button.png"
+              src="./public/images/header/call-calling.png"
               alt="arrow icon"
               class="w-4 h-4"
             />

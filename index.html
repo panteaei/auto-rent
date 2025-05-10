@@ -12,18 +12,18 @@
     />
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body class="w-full h-full">
-    <header class="w-full flex justify-center">
+  <body class="w-full] h-screen full__page">
+    <header id="header" class="w-full flex justify-center">
       <!-- container  -->
       <div
         class="w-[1440px] xl:h-[683px] md:h-[500px] md:bg-[url('../public/images/header/carfinale.png')] bg-no-repeat lg:bg-cover bg-contain relative"
-       >
+      >
         <!-- nav bar  -->
         <nav
           class="md:h-auto lg:h-24 xl:w-[1224px] w-full bg-white xl:rounded-b-[16px] rounded-none md:fixed md:top-0 md:right-0 md:left-0 lg:mx-[auto] flex justify-between items-center lg:px-8 md:py-[18.5px] py-3 md:px-6 px-4 mb-1.5 md:mb-0 md:shadow-2xs"
         >
           <!-- hamb icon for mobile -->
-          <div class="md:hidden block cursor-pointer " id="hamb">
+          <div class="md:hidden block cursor-pointer" id="hamb">
             <img
               src="./public/images/header/hamburgerblue.png"
               alt="hamb icon"
@@ -35,7 +35,7 @@
           </div>
 
           <ul
-          id="menu"
+            id="menu"
             class="flex flex-col md:flex-row md:items-center lg:gap-10 md:gap-3.5 text-sm lg:text-[16px] lg:leading-[100%] lg:font-estedad-light text-[#353535] absolute -right-full top-0 z-[1000] transition md:static bg-white h-screen md:h-auto w-[60%] sm:w-[50%] md:w-auto p-4 md:p-0"
           >
             <!-- first li is for mobile  -->
@@ -43,7 +43,7 @@
               class="md:hidden flex justify-between items-center border-b border-b-blue-100 pb-3 mb-3"
             >
               <img
-              id="xIcon"
+                id="xIcon"
                 class="w-4 h-4"
                 src="./public/images/header/icons8-x-24.png"
                 alt="x icon"
@@ -152,8 +152,8 @@
               >ورود / ثبت‌نام</span
             >
             <span class="inline-block md:hidden pb-1 text-sm text-[#727272]"
-              >ورود </span
-            >
+              >ورود
+            </span>
             <img
               class="inline-block md:hidden w-5 h-5"
               src="./public/images/header/login.png"
@@ -161,7 +161,7 @@
             />
           </a>
         </nav>
-        <!-- search btn and reserve btn for mobile wrapper -->
+        <!-- search btn and reserve btn and calling btn for mobile wrapper -->
         <div
           class="flex justify-between items-center md:hidden w-full h-[50px] px-4 pb-5 border-b border-b-blue-100"
         >
@@ -175,7 +175,7 @@
                 ></path>
               </g>
             </svg>
-            <input class="input" type="search" placeholder="جستجو..." />
+            <input class="search__input" type="search" placeholder="جستجو..." />
           </div>
           <!-- reserve car content -->
           <a
@@ -186,7 +186,7 @@
           <!-- calling btn  -->
           <a href="#" class="hidden xs:block">
             <img
-              class=" w-7 sm:w-auto border border-[#05164D] rounded-md hover:rounded-xl transition-all p-1"
+              class="w-7 sm:w-auto border border-[#05164D] rounded-md hover:rounded-xl transition-all p-1"
               src="./public/images/header/call-calling.png"
               alt="call icon"
           /></a>
@@ -204,11 +204,13 @@
               اُتـــو رِنت؛ سریع، آسان و به صرفه
             </h1>
             <p
-              class="text-[13px] md:text-[16px] text-white font-estedad-ExtraLight lg:w-full w-[220px] sm:w-[250px]  lg:h-9 lg:block md:hidden xs:block hidden"
+              class="text-[13px] md:text-[16px] text-white font-estedad-ExtraLight lg:w-full w-[220px] sm:w-[250px] lg:h-9 lg:block md:hidden xs:block hidden"
             >
               سرویس دهنده رزرو خودرو در ایران در کمترین زمان ممکن!
             </p>
-            <p class="text-xs font-estedad-light text-white block xs:hidden w-[100px]">
+            <p
+              class="text-xs font-estedad-light text-white block xs:hidden w-[100px]"
+            >
               رزرو خودرو در کمترین زمان ممکن
             </p>
             <div class="md:flex md:gap-2 md:mt-4">
@@ -237,22 +239,143 @@
               </a>
               <!--btn for mobile  -->
               <a
-              class="inline-flex md:hidden justify-center items-center gap-1.5 py-2 px-4 bg-[#FDB713] hover:bg-amber-300 transition-all rounded-[48px] font-estedad-regular text-[11px] mt-3"
-              href="#"
-            >
-           تماس با ما
-            <img
-              src="./public/images/header/call-calling.png"
-              alt="arrow icon"
-              class="w-4 h-4"
-            />
-            </a>
+                class="inline-flex md:hidden justify-center items-center gap-1.5 py-2 px-4 bg-[#FDB713] hover:bg-amber-300 transition-all rounded-[48px] font-estedad-regular text-[11px] mt-3"
+                href="#"
+              >
+                تماس با ما
+                <img
+                  src="./public/images/header/call-calling.png"
+                  alt="arrow icon"
+                  class="w-4 h-4"
+                />
+              </a>
+            </div>
+          </div>
+          <!-- reserving wrapper  -->
+          <div
+            class="absolute md:-bottom-8 lg:-bottom-[137px] xl:-bottom-[100.5px] left-0 right-0 h-[201px] xl:w-[1224px] w-full bg-white xl:rounded-[16px] rounded-none lg:mx-[auto] lg:px-6 md:py-6 py-3 md:px-6 px-6 mb-1.5 md:mb-0 md:shadow-2xs"
+          >
+            <!-- reserving content  -->
+            <!-- first section  -->
+            <div class="flex justify-between items-center mb-4">
+              <div class="h-10">
+                <button
+                  type="button"
+                  class="cursor-pointer text-sm/[180%] w-[135px] h-10 px-3 py-[7.5px] rounded-[20px] text-white font-estedad-light font-bold bg-[#194BF0] ml-2"
+                >
+                  اجاره خودرو با راننده
+                </button>
+                <button
+                  type="button"
+                  class="cursor-pointer text-sm/[180%] w-[142px] h-10 px-3 py-[7.5px] rounded-[20px] text-black font-estedad-ExtraLight font-bold border border-[#D7D7D7] bg-white ml-2"
+                >
+                  اجاره خودرو بی راننده
+                </button>
+                <button
+                  type="button"
+                  class="cursor-pointer text-sm/[180%] w-[137px] h-10 px-3 py-[7.5px] rounded-[20px] text-black font-estedad-ExtraLight font-bold border border-[#D7D7D7] bg-white"
+                >
+                  اجاره ماشین عروس
+                </button>
+              </div>
+              <a
+                class="h-[25px] text-[#194BF0] text-sm font-estedad-ExtraLight font-bold"
+                href="#"
+                >اطلاعات بیشتر در مورد رزرو خودرو</a
+              >
+            </div>
+            <!-- second section -->
+            <div class="flex items-center justify-start h-[25px]">
+              <div class="w-[41.4%] flex items-center gap-1">
+                <img
+                  src="./public/images/header/reserve/left.jpg"
+                  alt="left arrow"
+                />
+                <span class="text-sm text-black font-estedad-light"
+                  >محل تحویل خودرو
+                </span>
+              </div>
+              <div class="flex">
+                <div class="w-40 flex items-center gap-1">
+                  <img
+                    src="./public/images/header/reserve/left.jpg"
+                    alt="left arrow"
+                  />
+                  <span class="text-sm text-black font-estedad-light"
+                    >تاریخ تحویل
+                  </span>
+                </div>
+                <div class="w-40 flex items-center gap-1">
+                  <img
+                    src="./public/images/header/reserve/left.jpg"
+                    alt="left arrow"
+                  />
+                  <span class="text-sm text-black font-estedad-light"
+                    >ساعت تحویل
+                  </span>
+                </div>
+                <div class="w-40 flex items-center gap-1">
+                  <img
+                    src="./public/images/header/reserve/left.jpg"
+                    alt="left arrow"
+                  />
+                  <span class="text-sm text-black font-estedad-light"
+                    >تاریخ بازگشت
+                  </span>
+                </div>
+                <div class="w-40 flex items-center gap-1">
+                  <img
+                    src="./public/images/header/reserve/left.jpg"
+                    alt="left arrow"
+                  />
+                  <span class="text-sm text-black font-estedad-light"
+                    >ساعت بازگشت
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- third section -->
+            <div class="h-[56px] w-full mt-4">
+              <form action="get" class="w-full h-full">
+                <div
+                id="location__select"
+                  class="w-[41.4%] h-[29px] pl-3 pr-[14px] border-l border-l-[#D7D7D7] bg-white relative"
+                >
+                  <input
+                  id="location__input"
+                  name="location"
+                 value=""
+                    type="text"
+                    class="text-black bg-white w-full h-full outline-0 placeholder:text-black"
+                    placeholder="تهران-فرودگاه امام خمینی"
+                  />
+                  <img
+                  id="location__arrow"
+                    class="absolute left-3 top-1 cursor-pointer transition-all  "
+                    src="./public/images/header/reserve/arrow-down.png"
+                    alt="down arrow"
+                  />
+                  <ul id="location__list" dir="ltr" class="hidden absolute right-0 left-0 bg-white shadow px-4 pb-4 pt-3 w-full h-[294px] [&>*]:p-2.5 [&>*]:bg-blue-100 [&>*]:cursor-pointer [&>*]:mb-1.5 [&>*]:hover:bg-blue-400 [&>*]:hover:text-white [&>*]:transition-all [&>*]:text-sm [&>*]:text-right overflow-y-scroll scroll-ml-px">
+                    <li>تهران-فرودگاه امام خمینی</li>
+                    <li>تبریز-فرودگاه امام خمینی</li>
+                    <li>اصفهان-فرودگاه امام خمینی</li>
+                    <li>کرمان-فرودگاه امام خمینی</li>
+                    <li>مشهد-فرودگاه امام خمینی</li>
+                    <li>شمال-فرودگاه امام خمینی</li>
+                    <li>کرج-فرودگاه امام خمینی</li>
+                    <li>گیلان-فرودگاه امام خمینی</li>
+                  </ul>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <div id="greyBg" class="hidden w-screen h-screen bg-black/45 absolute top-0 right-0 left-0"></div>
+    <div
+      id="greyBg"
+      class="hidden w-screen h-screen bg-black/45 absolute top-0 right-0 left-0"
+    ></div>
     <script src="./src/header.js"></script>
   </body>
 </html>

@@ -10,6 +10,13 @@
       href="./public/images/favicon/icons8-encashment-car-64.png"
       type="image/x-icon"
     />
+    <!-- in github -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./jalalidatepicker/dist/jalalidatepicker.min.css"
+    />
+    <!-- my src  -->
     <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body class="w-full] h-screen full__page">
@@ -36,7 +43,7 @@
 
           <ul
             id="menu"
-            class="flex flex-col md:flex-row md:items-center lg:gap-10 md:gap-3.5 text-sm lg:text-[16px] lg:leading-[100%] lg:font-estedad-light text-[#353535] absolute -right-full top-0 z-[1000] transition md:static bg-white h-screen md:h-auto w-[60%] sm:w-[50%] md:w-auto p-4 md:p-0"
+            class="flex flex-col md:flex-row md:items-center lg:gap-10 md:gap-3.5 text-sm lg:text-[16px] lg:leading-[100%] lg:font-estedad-light text-[#353535] absolute -right-full top-0 z-[10000] transition md:static bg-white h-screen md:h-auto w-[60%] sm:w-[50%] md:w-auto p-4 md:p-0"
           >
             <!-- first li is for mobile  -->
             <li
@@ -194,10 +201,10 @@
         <!-- header content -->
         <!-- wrapper -->
         <div
-          class="h-[225px] md:h-auto md:w-full xl:h-[479px] md:mt-[134px] xl:pr-[108px] lg:pr-[80px] md:pr-0 pr-4 xl:pt-[97px] lg:pt-10 md:pt-0 pt-7 md:flex justify-between lg:block bg-[url('../public/images/header/carfinale.png')] md:bg-none bg-cover bg-no-repeat bg-left"
+          class="h-[225px] md:h-auto md:w-full xl:h-[479px] md:mt-[134px] xl:pr-[108px]  md:pr-0  xl:pt-[97px] lg:pt-10 md:pt-0 pt-7 bg-[url('../public/images/header/carfinale.png')] md:bg-none bg-cover bg-no-repeat bg-left"
         >
           <!-- content -->
-          <div class="lg:w-[460px] w-[319px] lg:m-0 md:mr-[36px]">
+          <div class="lg:w-[460px] w-[319px] lg:m-0 md:mr-[36px] pr-4 lg:pr-[80px] xl:pr-0 md:pr-0">
             <h1
               class="lg:text-[44px] md:text-[38px] text-[20px] text-[#FDB713] font-estedad-bold md:w-[335px] w-[170px] md:mb-[7px]"
             >
@@ -253,7 +260,7 @@
           </div>
           <!-- reserving wrapper  -->
           <div
-            class="absolute md:-bottom-8 lg:-bottom-[137px] xl:-bottom-[100.5px] left-0 right-0 h-[201px] xl:w-[1224px] w-full bg-white xl:rounded-[16px] rounded-none lg:mx-[auto] lg:px-6 md:py-6 py-3 md:px-6 px-6 mb-1.5 md:mb-0 md:shadow-2xs"
+            class="xl:absolute xl:-bottom-[100.5px] md:left-0 md:right-0 h-auto md:h-[226px] custom-md:h-[201px] xl:w-[1224px] w-full bg-white xl:rounded-[16px] rounded-none lg:mx-[auto] lg:px-6 md:py-6 p-3 md:px-6 mb-1.5 md:mb-0 mt-[10%] md:mt-[88px] lg:mt-[100px] xl:mt-0 md:shadow-2xs z-0"
           >
             <!-- reserving content  -->
             <!-- first section  -->
@@ -261,101 +268,132 @@
               <div class="h-10">
                 <button
                   type="button"
-                  class="cursor-pointer text-sm/[180%] w-[135px] h-10 px-3 py-[7.5px] rounded-[20px] text-white font-estedad-light font-bold bg-[#194BF0] ml-2"
+                  class="cursor-pointer md:text-sm/[180%] text-xs md:w-[135px] xs:w-[100px] w-[79px] h-10 px-3 md:py-[7.5px] py-0.5 rounded-[20px] text-white font-estedad-light font-bold bg-[#194BF0] ml-2"
                 >
                   اجاره خودرو با راننده
                 </button>
                 <button
                   type="button"
-                  class="cursor-pointer text-sm/[180%] w-[142px] h-10 px-3 py-[7.5px] rounded-[20px] text-black font-estedad-ExtraLight font-bold border border-[#D7D7D7] bg-white ml-2"
+                  class="cursor-pointer md:text-sm/[180%] text-xs md:w-[142px] xs:w-[100px] w-[81px] h-10 px-3 md:py-[7.5px] py-0.5 rounded-[20px] text-black font-estedad-ExtraLight font-bold border border-[#D7D7D7] bg-white ml-2"
                 >
                   اجاره خودرو بی راننده
                 </button>
                 <button
                   type="button"
-                  class="cursor-pointer text-sm/[180%] w-[137px] h-10 px-3 py-[7.5px] rounded-[20px] text-black font-estedad-ExtraLight font-bold border border-[#D7D7D7] bg-white"
+                  class="cursor-pointer md:text-sm/[180%] text-xs md:w-[137px] xs:w-[100px] w-[87px] h-10 px-3 md:py-[7.5px] py-0.5 rounded-[20px] text-black font-estedad-ExtraLight font-bold border border-[#D7D7D7] bg-white"
                 >
                   اجاره ماشین عروس
                 </button>
               </div>
               <a
-                class="h-[25px] text-[#194BF0] text-sm font-estedad-ExtraLight font-bold"
+                class="hidden sm:block h-[25px] text-[#194BF0] md:text-sm text-xs font-estedad-ExtraLight font-bold"
                 href="#"
                 >اطلاعات بیشتر در مورد رزرو خودرو</a
               >
+              <!-- for tablet  -->
+                    <a
+                class="sm:hidden xs:block hidden h-[25px] text-[#194BF0] md:text-sm text-xs font-estedad-ExtraLight font-bold"
+                href="#"
+                >اطلاعات بیشتر</a
+              >
+              <!-- for small mobiles  -->
+                        <a
+                class="xs:hidden block h-[25px] text-[#194BF0] md:text-sm text-xs font-estedad-ExtraLight font-bold"
+                href="#"
+                > بیشتر</a
+              >
             </div>
             <!-- second section -->
-            <div class="flex items-center justify-start h-[25px]">
-              <div class="w-[41.4%] flex items-center gap-1">
+            <div
+              class="flex items-center md:justify-start justify-between h-[25px]"
+            >
+              <div class="xl:w-[48%] md:w-[31%] flex items-center gap-1">
                 <img
                   src="./public/images/header/reserve/left.jpg"
                   alt="left arrow"
                 />
-                <span class="text-sm text-black font-estedad-light"
+                <span class="md:text-sm text-xs text-black font-estedad-light"
                   >محل تحویل خودرو
                 </span>
               </div>
-              <div class="flex">
-                <div class="w-40 flex items-center gap-1">
+              <div class="hidden md:flex items-center gap-2">
+                <div
+                  class="w-[86px] h-[25px] flex items-center gap-1 md:ml-[49px] ml-0"
+                >
                   <img
                     src="./public/images/header/reserve/left.jpg"
                     alt="left arrow"
                   />
-                  <span class="text-sm text-black font-estedad-light"
+                  <span class="md:text-sm text-xs text-black font-estedad-light"
                     >تاریخ تحویل
                   </span>
                 </div>
-                <div class="w-40 flex items-center gap-1">
+                <div
+                  class="w-[94px] h-[25px] flex items-center gap-1 md:ml-[36px] ml-0"
+                >
                   <img
                     src="./public/images/header/reserve/left.jpg"
                     alt="left arrow"
                   />
-                  <span class="text-sm text-black font-estedad-light"
+                  <span class="md:text-sm text-xs text-black font-estedad-light"
                     >ساعت تحویل
                   </span>
                 </div>
-                <div class="w-40 flex items-center gap-1">
+                <div
+                  class="w-[96px] h-[25px] flex items-center gap-1 md:ml-[39px] ml-0"
+                >
                   <img
                     src="./public/images/header/reserve/left.jpg"
                     alt="left arrow"
                   />
-                  <span class="text-sm text-black font-estedad-light"
+                  <span class="md:text-sm text-xs text-black font-estedad-light"
                     >تاریخ بازگشت
                   </span>
                 </div>
-                <div class="w-40 flex items-center gap-1">
+                <div class="w-[104px] h-[25px] flex items-center gap-1">
                   <img
                     src="./public/images/header/reserve/left.jpg"
                     alt="left arrow"
                   />
-                  <span class="text-sm text-black font-estedad-light"
+                  <span class="md:text-sm text-xs text-black font-estedad-light"
                     >ساعت بازگشت
                   </span>
                 </div>
               </div>
             </div>
+
             <!-- third section -->
-            <div class="h-[56px] w-full mt-4">
-              <form action="get" class="w-full h-full">
+            <div
+              class="custom-md:h-[56px] h-auto w-full flex items-center md:mt-4"
+            >
+              <form
+                action="get"
+                class="w-full h-full flex md:items-center flex-col md:flex-row md:flex-wrap custom-md:flex-nowrap md:border md:border-[#F3F3F3] rounded-[16px] pt-0 md:pt-[5px] custom-md:pt-0 "
+              >
+                <!-- location select  -->
                 <div
-                id="location__select"
-                  class="w-[41.4%] h-[29px] pl-3 pr-[14px] border-l border-l-[#D7D7D7] bg-white relative"
+                  id="location__select"
+                  class="xl:w-[47%] sm:w-[30%] xs:w-[35%] w-[50%] h-[32px] md:pl-3 md:pr-[14px] border-l border-l-[#D7D7D7] bg-white relative flex items-center mb-4 md:mb-0"
                 >
                   <input
-                  id="location__input"
-                  name="location"
-                 value=""
+                    id="location__input"
+                    name="location"
+                    value=""
                     type="text"
-                    class="text-black bg-white w-full h-full outline-0 placeholder:text-black"
+                    class="text-black bg-white w-full h-[29px] outline-0 placeholder:text-black placeholder:md:text-sm placeholder:text-xs md:text-sm text-xs"
                     placeholder="تهران-فرودگاه امام خمینی"
                   />
                   <img
-                  id="location__arrow"
-                    class="absolute left-3 top-1 cursor-pointer transition-all  "
+                    id="location__arrow"
+                    class="absolute left-3 md:top-1 top-0 bottom-0 my-auto cursor-pointer transition-all w-3 h-3   xs:w-4 xs:h-4 md:w-auto md:h-auto"
                     src="./public/images/header/reserve/arrow-down.png"
                     alt="down arrow"
                   />
-                  <ul id="location__list" dir="ltr" class="hidden absolute right-0 left-0 bg-white shadow px-4 pb-4 pt-3 w-full h-[294px] [&>*]:p-2.5 [&>*]:bg-blue-100 [&>*]:cursor-pointer [&>*]:mb-1.5 [&>*]:hover:bg-blue-400 [&>*]:hover:text-white [&>*]:transition-all [&>*]:text-sm [&>*]:text-right overflow-y-scroll scroll-ml-px">
+                  <ul
+                    id="location__list"
+                    dir="ltr"
+                    class="hidden absolute right-0 left-0 top-full z-30 bg-white shadow px-4 pb-4 pt-3 lg:w-full w-[200%] lg:h-[294px] h-[190px] [&>*]:p-2.5 [&>*]:bg-blue-100 [&>*]:cursor-pointer [&>*]:mb-1.5 [&>*]:hover:bg-blue-400 [&>*]:hover:text-white [&>*]:transition-all [&>*]:md:text-sm [&>*]:text-xs [&>*]:text-right overflow-y-scroll scroll-ml-px"
+                  >
                     <li>تهران-فرودگاه امام خمینی</li>
                     <li>تبریز-فرودگاه امام خمینی</li>
                     <li>اصفهان-فرودگاه امام خمینی</li>
@@ -366,6 +404,146 @@
                     <li>گیلان-فرودگاه امام خمینی</li>
                   </ul>
                 </div>
+                <!-- responsive section for tablet and mobile -->
+                <div>
+                  <div class="md:hidden flex items-center justify-between">
+                    <div
+                      class="xs:w-[86px]  w-autoh-[25px] flex items-center md:gap-1 gap-2 md:ml-[49px] ml-0"
+                    >
+                      <img
+                        src="./public/images/header/reserve/left.jpg"
+                        alt="left arrow"
+                      />
+                      <span
+                        class="md:text-sm xs:text-xs text-[10px] text-black font-estedad-light"
+                        >تاریخ تحویل
+                      </span>
+                    </div>
+                    <div
+                      class="xs:w-[94px]  w-autoh-[25px] flex items-center md:gap-1 gap-2 md:ml-[36px] ml-0"
+                    >
+                      <img
+                        src="./public/images/header/reserve/left.jpg"
+                        alt="left arrow"
+                      />
+                      <span
+                        class="md:text-sm xs:text-xs text-[10px] text-black font-estedad-light"
+                        >ساعت تحویل
+                      </span>
+                    </div>
+                    <div
+                      class="xs:w-[96px]  w-autoh-[25px] flex items-center md:gap-1 gap-2 md:ml-[39px] ml-0"
+                    >
+                      <img
+                        src="./public/images/header/reserve/left.jpg"
+                        alt="left arrow"
+                      />
+                      <span
+                        class="md:text-sm xs:text-xs text-[10px] text-black font-estedad-light"
+                        >تاریخ بازگشت
+                      </span>
+                    </div>
+                    <div class="xs:w-[104px] w-auto h-[25px] flex items-center md:gap-1 gap-2">
+                      <img
+                        src="./public/images/header/reserve/left.jpg"
+                        alt="left arrow"
+                      />
+                      <span
+                        class="md:text-sm xs:text-xs text-[10px] text-black font-estedad-light"
+                        >ساعت بازگشت
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+   
+
+
+
+
+                <!-- date and time and serach btn  -->
+                <div
+                  class="xl:w-[53%] md:w-[70%] flex items-center justify-between"
+                >
+                  <!-- input wrapper -->
+                  <div class="flex items-center justify-between w-full md:w-auto md:justify-normal md:gap-0">
+                    <div class="relative md:px-3 md:border-l md:border-l-[#D7D7D7]">
+                      <input
+                        data-jdp
+                        data-jdp-option-1
+                        type="text"
+                        class="md:w-[111px] w-[94px] h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300 "
+                        placeholder="1403٫02٫10"
+                      />
+                      <img
+                        class="absolute left-3 top-0 bottom-0 my-auto w-4 xs:w-auto"
+                        src="./public/images/header/reserve/calendar.png"
+                        alt="calender"
+                      />
+                    </div>
+                    <div class="relative md:px-3 md:border-l md:border-l-[#D7D7D7]">
+                      <input
+                        data-jdp
+                        data-jdp-option-2
+                        type="text"
+                        class="lg:w-[106px] md:w-[95px] xs:w-[94px] w-[69px] h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300"
+                        placeholder="07:00"
+                      />
+                      <img
+                        class="absolute left-3 top-0 bottom-0 my-auto w-4 xs:w-auto"
+                        src="./public/images/header/reserve/clock.png"
+                        alt="clock"
+                      />
+                    </div>
+                    <div class="relative md:px-3 md:border-l md:border-l-[#D7D7D7]">
+                      <input
+                        data-jdp
+                        data-jdp-option-3
+                        type="text"
+                        class="md:w-[111px] w-[94px] h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300"
+                        placeholder="1403٫02٫10"
+                      />
+                      <img
+                        class="absolute left-3 top-0 bottom-0 my-auto w-4 xs:w-auto"
+                        src="./public/images/header/reserve/calendar.png"
+                        alt="calender"
+                      />
+                    </div>
+                    <div class="relative md:px-3">
+                      <input
+                        data-jdp
+                        data-jdp-option-4
+                        type="text"
+                        class="lg:w-[106px] md:w-[95px] xs:w-[94px] w-[69px] h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300"
+                        placeholder="10:00"
+                      />
+                      <img
+                        class="absolute left-3 top-0 bottom-0 my-auto w-4 xs:w-auto"
+                        src="./public/images/header/reserve/clock.png"
+                        alt="clock"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="custom-md:block hidden w-[56px] h-[56px] bg-[#FDB713] rounded-[16px] p-4 cursor-pointer"
+                  >
+                    <img
+                      src="./public/images/header/reserve/search-normal.png"
+                      alt="search btn"
+                    />
+                  </button>
+                </div>
+                <!-- another submit btn  -->
+                <button
+                  type="submit"
+                  class="custom-md:hidden mx-auto mt-[10px] xs:w-[103px] w-[87px] h-[36px] rounded-[16px] bg-[#FDB713] flex justify-center items-center"
+                >
+                  <img
+                    src="./public/images/header/reserve/search-normal.png"
+                    alt="search btn"
+                  />
+                </button>
               </form>
             </div>
           </div>
@@ -376,6 +554,59 @@
       id="greyBg"
       class="hidden w-screen h-screen bg-black/45 absolute top-0 right-0 left-0"
     ></div>
+    <!-- git hub  -->
+    <script
+      type="text/javascript"
+      src="./jalalidatepicker/dist/jalalidatepicker.min.js"
+    ></script>
+    <!-- header script  -->
     <script src="./src/header.js"></script>
+    <script>
+      jalaliDatepicker.startWatch({
+        autoShow: false,
+      });
+      const inputList = document.querySelectorAll("input[data-jdp]");
+      for (i = 0; i < inputList.length; i++) {
+        inputList[i].addEventListener("focus", function () {
+          let defaults = {
+            date: true,
+            time: false,
+            dayRendering: null,
+          };
+          if (this.hasAttribute("data-jdp-option-1")) {
+            jalaliDatepicker.updateOptions({
+              date: true,
+              time: false,
+              persianDigits: true,
+              minDate: "today",
+            });
+          } else if (this.hasAttribute("data-jdp-option-2")) {
+            jalaliDatepicker.updateOptions({
+              date: false,
+              time: true,
+              hasSecond: false,
+              persianDigits: true,
+            });
+          } else if (this.hasAttribute("data-jdp-option-3")) {
+            jalaliDatepicker.updateOptions({
+              date: true,
+              time: false,
+              persianDigits: true,
+              minDate: "today",
+            });
+          } else if (this.hasAttribute("data-jdp-option-4")) {
+            jalaliDatepicker.updateOptions({
+              date: false,
+              time: true,
+              hasSecond: false,
+              persianDigits: true,
+            });
+          } else {
+            jalaliDatepicker.updateOptions(defaults);
+          }
+          jalaliDatepicker.show(this);
+        });
+      }
+    </script>
   </body>
 </html>

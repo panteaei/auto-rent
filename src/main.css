@@ -72,6 +72,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "number";
+  src: url("../public/fonts/woff2/Far.Homa.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   /*fonts*/
   --font-estedad-black: "Estedad-black", "sans-serif";
@@ -83,8 +91,10 @@
   --font-estedad-regular: "Estedad-regular", "sans-serif";
   --font-estedad-semibold: "Estedad-semibold", "sans-serif";
   --font-estedad-thin: "Estedad-thin", "sans-serif";
+  --font-number: "number" , "sans-serif";
   /*break points*/
-  --breakpoint-xs: 30rem; /*(width >= 30rem) 30rem = 480px*/
+  --breakpoint-xs: 30rem; /* (width >= 30rem) 30rem = 480px */
+  --breakpoint-custom-md:57rem;/* (width >= 57) 57 = 912px */
 }
 
 /* customizing the search input in mobile  */

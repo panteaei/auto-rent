@@ -16,6 +16,8 @@
       rel="stylesheet"
       href="./jalalidatepicker/dist/jalalidatepicker.min.css"
     />
+    <!-- swiper src  -->
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
     <!-- my src  -->
     <link rel="stylesheet" href="./src/output.css" />
   </head>
@@ -27,7 +29,7 @@
       >
         <!-- nav bar  -->
         <nav
-          class="md:h-auto lg:h-24 xl:w-[1224px] w-full bg-white xl:rounded-b-[16px] rounded-none md:fixed md:top-0 md:right-0 md:left-0 lg:mx-[auto] flex justify-between items-center lg:px-8 md:py-[18.5px] py-3 md:px-6 px-4 mb-1.5 md:mb-0 md:shadow-2xs"
+          class="md:h-auto lg:h-24 xl:w-[1224px] w-full bg-white xl:rounded-b-[16px] rounded-none md:fixed md:top-0 md:right-0 md:left-0 lg:mx-[auto] flex justify-between items-center lg:px-8 md:py-[18.5px] py-3 md:px-6 px-4 mb-1.5 md:mb-0 md:shadow-2xs z-1000"
         >
           <!-- hamb icon for mobile -->
           <div class="md:hidden block cursor-pointer" id="hamb">
@@ -201,10 +203,12 @@
         <!-- header content -->
         <!-- wrapper -->
         <div
-          class="h-[225px] md:h-auto md:w-full xl:h-[479px] md:mt-[134px] xl:pr-[108px]  md:pr-0  xl:pt-[97px] lg:pt-10 md:pt-0 pt-7 bg-[url('../public/images/header/carfinale.png')] md:bg-none bg-cover bg-no-repeat bg-left"
+          class="h-[225px] md:h-auto md:w-full xl:h-[479px] md:mt-[134px] xl:pr-[108px] md:pr-0 xl:pt-[97px] lg:pt-10 md:pt-0 pt-7 bg-[url('../public/images/header/carfinale.png')] md:bg-none bg-cover bg-no-repeat bg-left"
         >
           <!-- content -->
-          <div class="lg:w-[460px] w-[319px] lg:m-0 md:mr-[36px] pr-4 lg:pr-[80px] xl:pr-0 md:pr-0">
+          <div
+            class="lg:w-[460px] w-[319px] lg:m-0 md:mr-[36px] pr-4 lg:pr-[80px] xl:pr-0 md:pr-0"
+          >
             <h1
               class="lg:text-[44px] md:text-[38px] text-[20px] text-[#FDB713] font-estedad-bold md:w-[335px] w-[170px] md:mb-[7px]"
             >
@@ -260,7 +264,7 @@
           </div>
           <!-- reserving wrapper  -->
           <div
-            class="xl:absolute xl:-bottom-[100.5px] md:left-0 md:right-0 h-auto md:h-[226px] custom-md:h-[201px] xl:w-[1224px] w-full bg-white xl:rounded-[16px] rounded-none lg:mx-[auto] lg:px-6 md:py-6 p-3 md:px-6 mb-1.5 md:mb-0 mt-[10%] md:mt-[88px] lg:mt-[100px] xl:mt-0 md:shadow-2xs z-0"
+            class="xl:absolute xl:-bottom-[100.5px] md:left-0 md:right-0 h-auto custom-md:h-[201px] xl:w-[1224px] w-full bg-white xl:rounded-[16px] rounded-none lg:mx-[auto] lg:px-6 md:py-6 p-3 md:px-6 mb-1.5 md:mb-0 mt-[10%] md:mt-[88px] lg:mt-[100px] xl:mt-0 md:shadow-2xs z-0"
           >
             <!-- reserving content  -->
             <!-- first section  -->
@@ -291,16 +295,17 @@
                 >اطلاعات بیشتر در مورد رزرو خودرو</a
               >
               <!-- for tablet  -->
-                    <a
+              <a
                 class="sm:hidden xs:block hidden h-[25px] text-[#194BF0] md:text-sm text-xs font-estedad-ExtraLight font-bold"
                 href="#"
                 >اطلاعات بیشتر</a
               >
               <!-- for small mobiles  -->
-                        <a
+              <a
                 class="xs:hidden block h-[25px] text-[#194BF0] md:text-sm text-xs font-estedad-ExtraLight font-bold"
                 href="#"
-                > بیشتر</a
+              >
+                بیشتر</a
               >
             </div>
             <!-- second section -->
@@ -368,12 +373,12 @@
             >
               <form
                 action="get"
-                class="w-full h-full flex md:items-center flex-col md:flex-row md:flex-wrap custom-md:flex-nowrap md:border md:border-[#F3F3F3] rounded-[16px] pt-0 md:pt-[5px] custom-md:pt-0 "
+                class="w-full h-full flex md:items-center flex-col md:flex-row md:flex-wrap custom-md:flex-nowrap md:border md:border-[#F3F3F3] rounded-[16px] pt-0 md:pt-[5px] md:pb-[5px] custom-md:pt-0 custom-md:pb-0"
               >
                 <!-- location select  -->
                 <div
                   id="location__select"
-                  class="xl:w-[47%] sm:w-[30%] xs:w-[35%] w-[50%] h-[32px] md:pl-3 md:pr-[14px] border-l border-l-[#D7D7D7] bg-white relative flex items-center mb-4 md:mb-0"
+                  class="xl:w-[47%] sm:w-[30%] xs:w-[35%] w-[50%] h-[32px] md:h-auto lg:h-[32px] md:pl-3 md:pr-[14px] border-l border-l-[#D7D7D7] bg-white relative flex items-center mb-4 md:mb-0"
                 >
                   <input
                     id="location__input"
@@ -385,7 +390,7 @@
                   />
                   <img
                     id="location__arrow"
-                    class="absolute left-3 md:top-1 top-0 bottom-0 my-auto cursor-pointer transition-all w-3 h-3   xs:w-4 xs:h-4 md:w-auto md:h-auto"
+                    class="absolute left-3 md:top-1 top-0 bottom-0 my-auto cursor-pointer transition-all w-3 h-3 xs:w-4 xs:h-4 md:w-auto md:h-auto"
                     src="./public/images/header/reserve/arrow-down.png"
                     alt="down arrow"
                   />
@@ -408,7 +413,7 @@
                 <div>
                   <div class="md:hidden flex items-center justify-between">
                     <div
-                      class="xs:w-[86px]  w-autoh-[25px] flex items-center md:gap-1 gap-2 md:ml-[49px] ml-0"
+                      class="xs:w-[86px] w-autoh-[25px] flex items-center md:gap-1 gap-2 md:ml-[49px] ml-0"
                     >
                       <img
                         src="./public/images/header/reserve/left.jpg"
@@ -420,7 +425,7 @@
                       </span>
                     </div>
                     <div
-                      class="xs:w-[94px]  w-autoh-[25px] flex items-center md:gap-1 gap-2 md:ml-[36px] ml-0"
+                      class="xs:w-[94px] w-autoh-[25px] flex items-center md:gap-1 gap-2 md:ml-[36px] ml-0"
                     >
                       <img
                         src="./public/images/header/reserve/left.jpg"
@@ -432,7 +437,7 @@
                       </span>
                     </div>
                     <div
-                      class="xs:w-[96px]  w-autoh-[25px] flex items-center md:gap-1 gap-2 md:ml-[39px] ml-0"
+                      class="xs:w-[96px] w-autoh-[25px] flex items-center md:gap-1 gap-2 md:ml-[39px] ml-0"
                     >
                       <img
                         src="./public/images/header/reserve/left.jpg"
@@ -443,7 +448,9 @@
                         >تاریخ بازگشت
                       </span>
                     </div>
-                    <div class="xs:w-[104px] w-auto h-[25px] flex items-center md:gap-1 gap-2">
+                    <div
+                      class="xs:w-[104px] w-auto h-[25px] flex items-center md:gap-1 gap-2"
+                    >
                       <img
                         src="./public/images/header/reserve/left.jpg"
                         alt="left arrow"
@@ -456,23 +463,22 @@
                   </div>
                 </div>
 
-   
-
-
-
-
                 <!-- date and time and serach btn  -->
                 <div
                   class="xl:w-[53%] md:w-[70%] flex items-center justify-between"
                 >
                   <!-- input wrapper -->
-                  <div class="flex items-center justify-between w-full md:w-auto md:justify-normal md:gap-0">
-                    <div class="relative md:px-3 md:border-l md:border-l-[#D7D7D7]">
+                  <div
+                    class="flex items-center justify-between w-full md:w-auto md:justify-normal md:gap-0"
+                  >
+                    <div
+                      class="relative md:px-3 md:border-l md:border-l-[#D7D7D7]"
+                    >
                       <input
                         data-jdp
                         data-jdp-option-1
                         type="text"
-                        class="md:w-[111px] w-[94px] h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300 "
+                        class="md:w-[111px] w-[94px] h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300"
                         placeholder="1403٫02٫10"
                       />
                       <img
@@ -481,7 +487,9 @@
                         alt="calender"
                       />
                     </div>
-                    <div class="relative md:px-3 md:border-l md:border-l-[#D7D7D7]">
+                    <div
+                      class="relative md:px-3 md:border-l md:border-l-[#D7D7D7]"
+                    >
                       <input
                         data-jdp
                         data-jdp-option-2
@@ -495,7 +503,9 @@
                         alt="clock"
                       />
                     </div>
-                    <div class="relative md:px-3 md:border-l md:border-l-[#D7D7D7]">
+                    <div
+                      class="relative md:px-3 md:border-l md:border-l-[#D7D7D7]"
+                    >
                       <input
                         data-jdp
                         data-jdp-option-3
@@ -537,7 +547,7 @@
                 <!-- another submit btn  -->
                 <button
                   type="submit"
-                  class="custom-md:hidden mx-auto mt-[10px] xs:w-[103px] w-[87px] h-[36px] rounded-[16px] bg-[#FDB713] flex justify-center items-center"
+                  class="custom-md:hidden mx-auto mt-[10px] md:mt-5 xs:w-[103px] w-[87px] h-[36px] rounded-[16px] bg-[#FDB713] flex justify-center items-center"
                 >
                   <img
                     src="./public/images/header/reserve/search-normal.png"
@@ -550,63 +560,780 @@
         </div>
       </div>
     </header>
+    <!-- main  -->
+    <main
+      class="w-full flex justify-center mt-[250px] xs:mt-[270px] sm:mt-[290px] md:mt-[137px] custom-md:mt-[94px] lg:mt-[209px] xl:mt-0"
+    >
+      <!-- container  -->
+      <div class="w-full bg-gray-100 max-w-[1440px]">
+        <!-- section 1 - brands  -->
+        <section class="xl:mt-[147px] xl:mb-[47px] my-5">
+          <!-- brands wrapper -->
+          <div class="w-full h-[80px]">
+            <!-- Slider main container -->
+            <div class="swiper brands_swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper swiper-wrapper-brands">
+                <!-- Slides -->
+                <div class="swiper-slide swiper-slide-brand">
+                  <div class="">
+                    <img
+                      class="h-auto w-[60px] lg:w-[70px] xl:w-auto"
+                      src="./public/images/main/section1/1.png"
+                      alt="logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-brand">
+                  <div class="">
+                    <img
+                      class="h-auto w-[60px] lg:w-[70px] xl:w-auto"
+                      src="./public/images/main/section1/2.png"
+                      alt="logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-brand">
+                  <div class="">
+                    <img
+                      class="h-auto w-[60px] lg:w-[70px] xl:w-auto"
+                      src="./public/images/main/section1/3.png"
+                      alt="logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-brand">
+                  <div>
+                    <img
+                      class="h-auto w-[60px] lg:w-[70px] xl:w-auto"
+                      src="./public/images/main/section1/4.png"
+                      alt="logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-brand">
+                  <div>
+                    <img
+                      class="h-auto w-[60px] lg:w-[70px] xl:w-auto"
+                      src="./public/images/main/section1/5.png"
+                      alt="logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-brand">
+                  <div>
+                    <img
+                      class="h-auto w-[60px] lg:w-[70px] xl:w-auto"
+                      src="./public/images/main/section1/6.png"
+                      alt="logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-brand">
+                  <div>
+                    <img
+                      class="h-auto w-[60px] lg:w-[70px] xl:w-auto"
+                      src="./public/images/main/section1/7.png"
+                      alt="logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-brand">
+                  <div>
+                    <img
+                      class="h-auto w-[60px] lg:w-[70px] xl:w-auto"
+                      src="./public/images/main/section1/8.png"
+                      alt="logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-brand">
+                  <div>
+                    <img
+                      class="h-auto w-[60px] lg:w-[70px] xl:w-auto"
+                      src="./public/images/main/section1/9.png"
+                      alt="logo"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-brand">
+                  <div>
+                    <img
+                      class="h-auto w-[60px] lg:w-[70px] xl:w-auto"
+                      src="./public/images/main/section1/10.png"
+                      alt="logo"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section 2 - Description  -->
+        <section
+          class="relative mx-auto xl:w-[1224px] w-full sm:h-[292px] h-[220px] rounded-[16px] bg-[url('../public/images/main/section2/descriptionbg.png')] bg-no-repeat bg-cover lg:pt-6 sm:pt-[50px] pt-6 px-4"
+        >
+          <h2
+            class="text-[#FDB713] text-[24px] font-estedad-medium text-center"
+          >
+            چــــــرا اُتو رِنت؟
+          </h2>
+          <p
+            class="sm:text-[18px] text-sm text-white text-center font-estedad-light lg:w-[845px] mx-auto mt-2"
+          >
+            اجاره خودرو از یک شرکت اجاره خودرو با سابقه به شما کمک می‌کند تا در
+            مسافرت ها، قرار ملاقات‌ های مهم، مجالس و مراسم‌های خانوادگی ماشین
+            مناسب خود را در اختیار داشته باشید.
+            <span class="hidden lg:block"
+              >اگر شما اصلا خودرویی در اختیار ندارید یا خودروی شما مطمئن نیست،
+              می‌توانید از سوییچ، خودروی مناسب خود را کرایه کرده و با آسودگی به
+              سفر بروید.</span
+            >
+          </p>
+          <div
+            class="absolute lg:w-[1016px] w-full flex justify-center xl:gap-10 lg:gap-[30px] xs:gap-[15px] gap-[7px] top-[75%] left-0 right-0 mx-auto bg-none"
+          >
+            <div
+              class="md:w-[200px] sm:w-[150px] xs:w-[122px] w-[100px] custom-md:w-[262px] lg:w-[312px] lg:py-4 custom-md:px-6 sm:py-6 py-2 flex flex-col items-center gap-2 bg-white rounded-[16px] border border-[#D7D7D7]"
+            >
+              <img
+                class="w-10 xs:w-[50px] sm:w-[60px] lg:w-auto"
+                src="./public/images/main/section2/tahvil.png"
+                alt="icon"
+              />
+              <span
+                class="text-[#414141] sm:text-[16px] text-xs font-estedad-bold"
+                >تحویل در محل</span
+              >
+              <p
+                class="text-center text-[#757575] font-estedad-light hidden custom-md:block"
+              >
+                تحویل خودرو در زمان و مکان تعیین شده توسط شما خواهد بود.
+              </p>
+            </div>
+            <div
+              class="md:w-[200px] sm:w-[150px] xs:w-[122px] w-[100px] custom-md:w-[262px] lg:w-[312px] lg:py-4 custom-md:px-6 sm:py-6 py-2 flex flex-col items-center gap-2 bg-white rounded-[16px] border border-[#D7D7D7]"
+            >
+              <img
+                class="w-10 xs:w-[50px] sm:w-[60px] lg:w-auto"
+                src="./public/images/main/section2/poshtibani.png"
+                alt="icon"
+              />
+              <span
+                class="text-[#414141] sm:text-[16px] text-xs font-estedad-bold text-center"
+                >پشتیبانی 24 ساعته
+              </span>
+              <p
+                class="text-center text-[#757575] font-estedad-light hidden custom-md:block"
+              >
+                کارشناسان ما در هر زمان و مکان، پاسخگوی سوالات شما خواهند بود.
+              </p>
+            </div>
+            <div
+              class="md:w-[200px] sm:w-[150px] xs:w-[122px] w-[100px] custom-md:w-[262px] lg:w-[312px] lg:py-4 custom-md:px-6 sm:py-6 py-2 flex flex-col items-center gap-2 bg-white rounded-[16px] border border-[#D7D7D7]"
+            >
+              <img
+                class="w-10 xs:w-[50px] sm:w-[60px] lg:w-auto"
+                src="./public/images/main/section2/price.png"
+                alt="icon"
+              />
+              <span
+                class="text-[#414141] sm:text-[16px] text-xs font-estedad-bold"
+                >قیمت مناسب
+              </span>
+              <p
+                class="text-center text-[#757575] font-estedad-light hidden custom-md:block"
+              >
+                هدف ما، ارائه بهترین خدمات با مناسب ترین قیمت ممکن است.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- section 3 - car category -->
+        <section
+          class="mx-auto xl:w-[1224px] w-full lg:mt-[152px] custom-md:mt-[170px] sm:mt-[120px] mt-[100px] flex justify-center gap-x-2 gap-y-3 xl:flex-nowrap flex-wrap"
+        >
+          <a href="#"
+            ><img
+              class="w-[150px] sm:w-auto"
+              src="./public/images/main/section3/کوپه.png"
+              alt="car img"
+          /></a>
+          <a href="#"
+            ><img
+              class="w-[150px] sm:w-auto"
+              src="./public/images/main/section3/سدان.png"
+              alt="car img"
+          /></a>
+          <a href="#"
+            ><img
+              class="w-[150px] sm:w-auto"
+              src="./public/images/main/section3/کروک.png"
+              alt="car img"
+          /></a>
+          <a href="#"
+            ><img
+              class="w-[150px] sm:w-auto"
+              src="./public/images/main/section3/شاسی بلند.png"
+              alt="car img"
+          /></a>
+          <a href="#"
+            ><img
+              class="w-[150px] sm:w-auto"
+              src="./public/images/main/section3/اسپرت.png"
+              alt="car img"
+          /></a>
+        </section>
+        <!-- section 4 - reserving car  -->
+        <section class="mx-auto xl:w-[1224px] w-full mt-[48px]">
+          <!-- section 4 - part 1 -->
+          <div class="relative">
+            <span
+              class="text-[#5E5E5E] sm:text-[24px]/[180%] texy-[20px] font-estedad-ExtraLight text-center block mb-2"
+              >مشاهده موجودی خودروها
+            </span>
+            <h3
+              class="text-[#353535] sm:text-[32px]/[180%] text-[24px] font-estedad-ExtraBold text-center block"
+            >
+              رزرو خودرو در <span class="text-[#D79C10]">اُتـــورِنت</span>
+            </h3>
+            <div class="flex justify-center xs:gap-2 gap-1 mt-4">
+              <div
+                class="sm:w-[128px] xs:w-[90px] w-[70px] h-[48px] bg-[#194BF0] flex justify-center items-center rounded-[8px]"
+              >
+                <span
+                  class="xs:text-[14px] text-[12px] text-white font-estedad-medium"
+                  >پرطرفدار</span
+                >
+              </div>
+              <div
+                class="sm:w-[128px] xs:w-[90px] w-[70px] h-[48px] flex justify-center items-center rounded-[8px] border border-[#194BF0]"
+              >
+                <span
+                  class="xs:text-[14px] text-[12px] text-[#0C4F96] font-estedad-medium"
+                  >لوکس</span
+                >
+              </div>
+              <div
+                class="sm:w-[128px] xs:w-[90px] w-[70px] h-[48px] flex justify-center items-center rounded-[8px] border border-[#194BF0]"
+              >
+                <span
+                  class="xs:text-[14px] text-[12px] text-[#0C4F96] font-estedad-medium"
+                  >اقتصادی</span
+                >
+              </div>
+            </div>
+            <a
+              href="#"
+              class="flex items-center custom-md:gap-2 gap-1sm absolute xs:left-[28px] left-[12px] bottom-[10px]"
+            >
+              <span
+                class="hidden custom-md:block text-[#194BF0] lg:text-[18px] text-sm font-estedad-medium"
+                >مشاهده همه</span
+              >
+              <span
+                class="custom-md:hidden block text-[#194BF0] lg:text-[18px] xs:text-sm text-[12px] font-estedad-medium"
+              >
+                بیشتر</span
+              >
+              <img
+                class="w-[15px] lg:w-auto"
+                src="./public/images/main/section4/arrow-left.png"
+                alt="arrow"
+              />
+            </a>
+          </div>
+          <!-- section 4 - part 2  car cards-->
+          <!-- car cards wrapper  -->
+          <div class="flex justify-center flex-wrap sm:gap-6 gap-[10px] mt-6">
+            <!-- car card 1  -->
+            <div
+              href="#"
+              class="p-4 bg-white lg:w-[392px] sm:w-[300px] xs:w-[226px] w-[300px] rounded-[16px]"
+            >
+              <div class="rounded-[12px] mb-2">
+                <img
+                  class="w-full"
+                  src="./public/images/main/section4/car1.png"
+                  alt="car"
+                />
+              </div>
+              <span
+                class="text-black text-[16px]/[140%] font-estedad-ExtraBold mb-2"
+                >اجاره بنز E350 سدان</span
+              >
+              <p class="text-[12px]/[180%] text-[#868686] my-2">
+                مدل : <span class="text-[#494949] font-number mb-2">2016</span>
+              </p>
+              <div
+                class="w-full h-11 bg-[#F3F3F3] p-2 rounded-[8px] flex items-center mb-2"
+              >
+                <div class="w-full h-full flex justify-between items-center">
+                  <p
+                    class="text-[#212121] text-[12px]/[180%] flex items-center gap-2 font-number"
+                  >
+                    از 1 تا 30 روز:
+                    <span
+                      class="text-[#194BF0] sm:text-[16px]/[100%] text-sm font-number font-bold"
+                      >8,500,000</span
+                    >
+                  </p>
+                  <span
+                    class="text-[12px]/[180%] text-[#494949] font-estedad-regular"
+                    >روزانه</span
+                  >
+                </div>
+              </div>
+              <div
+                class="w-full h-11 bg-[#F3F3F3] p-2 rounded-[8px] flex items-center"
+              >
+                <div class="w-full h-full flex justify-between items-center">
+                  <p
+                    class="text-[#212121] text-[12px]/[180%] flex items-center gap-2 font-number"
+                  >
+                    از 1 تا 30 روز:
+                    <span
+                      class="text-[#194BF0] sm:text-[16px]/[100%] text-sm font-number font-bold"
+                      >8,500,000</span
+                    >
+                  </p>
+                  <span
+                    class="text-[12px]/[180%] text-[#494949] font-estedad-regular"
+                    >روزانه</span
+                  >
+                </div>
+              </div>
+
+              <div class="pt-2 mt-2 border-t border-t-[#D7D7D7]">
+                <div class="flex items-center justify-between h-[21px]">
+                  <span
+                    class="text-[12px]/[100%] text-[#212121] font-estedad-regular"
+                    >مبلغ ضمانت:</span
+                  >
+                  <span
+                    class="texy-[#212121] text-[12px]/[100%] font-number font-bold"
+                    >80 میلیون تومان</span
+                  >
+                </div>
+                <div class="w-full bg-[#194BF0] rounded-[8px] h-10 mt-2">
+                  <a
+                    class="w-full h-full text-[14px]/[180%] text-white font-estedad-medium flex justify-center items-center"
+                    href="#"
+                    >درخواست رزرو</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- car card 2  -->
+            <div
+              href="#"
+              class="p-4 bg-white lg:w-[392px] sm:w-[300px] xs:w-[226px] w-[300px] rounded-[16px]"
+            >
+              <div class="rounded-[12px] mb-2">
+                <img
+                  class="w-full"
+                  src="./public/images/main/section4/car2.png"
+                  alt="car"
+                />
+              </div>
+              <span
+                class="text-black text-[16px]/[140%] font-estedad-ExtraBold mb-2"
+              >
+                اجاره تویوتا لندکروز در تهران 2013
+              </span>
+              <p class="text-[12px]/[180%] text-[#868686] my-2">
+                مدل : <span class="text-[#494949] font-number mb-2">2016</span>
+              </p>
+              <div
+                class="w-full h-11 bg-[#F3F3F3] p-2 rounded-[8px] flex items-center mb-2"
+              >
+                <div class="w-full h-full flex justify-between items-center">
+                  <p
+                    class="text-[#212121] text-[12px]/[180%] flex items-center gap-2 font-number"
+                  >
+                    از 1 تا 30 روز:
+                    <span
+                      class="text-[#194BF0] sm:text-[16px]/[100%] text-sm font-number font-bold"
+                      >8,500,000</span
+                    >
+                  </p>
+                  <span
+                    class="text-[12px]/[180%] text-[#494949] font-estedad-regular"
+                    >روزانه</span
+                  >
+                </div>
+              </div>
+              <div
+                class="w-full h-11 bg-[#F3F3F3] p-2 rounded-[8px] flex items-center"
+              >
+                <div class="w-full h-full flex justify-between items-center">
+                  <p
+                    class="text-[#212121] text-[12px]/[180%] flex items-center gap-2 font-number"
+                  >
+                    از 1 تا 30 روز:
+                    <span
+                      class="text-[#194BF0] sm:text-[16px]/[100%] text-sm font-number font-bold"
+                      >8,500,000</span
+                    >
+                  </p>
+                  <span
+                    class="text-[12px]/[180%] text-[#494949] font-estedad-regular"
+                    >روزانه</span
+                  >
+                </div>
+              </div>
+
+              <div class="pt-2 mt-2 border-t border-t-[#D7D7D7]">
+                <div class="flex items-center justify-between h-[21px]">
+                  <span
+                    class="text-[12px]/[100%] text-[#212121] font-estedad-regular"
+                    >مبلغ ضمانت:</span
+                  >
+                  <span
+                    class="texy-[#212121] text-[12px]/[100%] font-number font-bold"
+                    >80 میلیون تومان</span
+                  >
+                </div>
+                <div class="w-full bg-[#194BF0] rounded-[8px] h-10 mt-2">
+                  <a
+                    class="w-full h-full text-[14px]/[180%] text-white font-estedad-medium flex justify-center items-center"
+                    href="#"
+                    >درخواست رزرو</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- car card 3  -->
+            <div
+              href="#"
+              class="p-4 bg-white lg:w-[392px] sm:w-[300px] xs:w-[226px] w-[300px] rounded-[16px]"
+            >
+              <div class="rounded-[12px] mb-2">
+                <img
+                  class="w-full"
+                  src="./public/images/main/section4/car3.png"
+                  alt="car"
+                />
+              </div>
+              <span
+                class="text-black text-[16px]/[140%] font-estedad-ExtraBold mb-2"
+                >اجاره جنسیس کوپه</span
+              >
+              <p class="text-[12px]/[180%] text-[#868686] my-2">
+                مدل : <span class="text-[#494949] font-number mb-2">2016</span>
+              </p>
+              <div
+                class="w-full h-11 bg-[#F3F3F3] p-2 rounded-[8px] flex items-center mb-2"
+              >
+                <div class="w-full h-full flex justify-between items-center">
+                  <p
+                    class="text-[#212121] text-[12px]/[180%] flex items-center gap-2 font-number"
+                  >
+                    از 1 تا 30 روز:
+                    <span
+                      class="text-[#194BF0] sm:text-[16px]/[100%] text-sm font-number font-bold"
+                      >8,500,000</span
+                    >
+                  </p>
+                  <span
+                    class="text-[12px]/[180%] text-[#494949] font-estedad-regular"
+                    >روزانه</span
+                  >
+                </div>
+              </div>
+              <div
+                class="w-full h-11 bg-[#F3F3F3] p-2 rounded-[8px] flex items-center"
+              >
+                <div class="w-full h-full flex justify-between items-center">
+                  <p
+                    class="text-[#212121] text-[12px]/[180%] flex items-center gap-2 font-number"
+                  >
+                    از 1 تا 30 روز:
+                    <span
+                      class="text-[#194BF0] sm:text-[16px]/[100%] text-sm font-number font-bold"
+                      >8,500,000</span
+                    >
+                  </p>
+                  <span
+                    class="text-[12px]/[180%] text-[#494949] font-estedad-regular"
+                    >روزانه</span
+                  >
+                </div>
+              </div>
+
+              <div class="pt-2 mt-2 border-t border-t-[#D7D7D7]">
+                <div class="flex items-center justify-between h-[21px]">
+                  <span
+                    class="text-[12px]/[100%] text-[#212121] font-estedad-regular"
+                    >مبلغ ضمانت:</span
+                  >
+                  <span
+                    class="texy-[#212121] text-[12px]/[100%] font-number font-bold"
+                    >80 میلیون تومان</span
+                  >
+                </div>
+                <div class="w-full bg-[#194BF0] rounded-[8px] h-10 mt-2">
+                  <a
+                    class="w-full h-full text-[14px]/[180%] text-white font-estedad-medium flex justify-center items-center"
+                    href="#"
+                    >درخواست رزرو</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- car card 4  -->
+            <div
+              href="#"
+              class="p-4 bg-white lg:w-[392px] sm:w-[300px] xs:w-[226px] w-[300px] rounded-[16px]"
+            >
+              <div class="rounded-[12px] mb-2">
+                <img
+                  class="w-full"
+                  src="./public/images/main/section4/car4.png"
+                  alt="car"
+                />
+              </div>
+              <span
+                class="text-black text-[16px]/[140%] font-estedad-ExtraBold mb-2"
+                >اجاره بی ام و 528</span
+              >
+              <p class="text-[12px]/[180%] text-[#868686] my-2">
+                مدل : <span class="text-[#494949] font-number mb-2">2016</span>
+              </p>
+              <div
+                class="w-full h-11 bg-[#F3F3F3] p-2 rounded-[8px] flex items-center mb-2"
+              >
+                <div class="w-full h-full flex justify-between items-center">
+                  <p
+                    class="text-[#212121] text-[12px]/[180%] flex items-center gap-2 font-number"
+                  >
+                    از 1 تا 30 روز:
+                    <span
+                      class="text-[#194BF0] sm:text-[16px]/[100%] text-sm font-number font-bold"
+                      >8,500,000</span
+                    >
+                  </p>
+                  <span
+                    class="text-[12px]/[180%] text-[#494949] font-estedad-regular"
+                    >روزانه</span
+                  >
+                </div>
+              </div>
+              <div
+                class="w-full h-11 bg-[#F3F3F3] p-2 rounded-[8px] flex items-center"
+              >
+                <div class="w-full h-full flex justify-between items-center">
+                  <p
+                    class="text-[#212121] text-[12px]/[180%] flex items-center gap-2 font-number"
+                  >
+                    از 1 تا 30 روز:
+                    <span
+                      class="text-[#194BF0] sm:text-[16px]/[100%] text-sm font-number font-bold"
+                      >8,500,000</span
+                    >
+                  </p>
+                  <span
+                    class="text-[12px]/[180%] text-[#494949] font-estedad-regular"
+                    >روزانه</span
+                  >
+                </div>
+              </div>
+
+              <div class="pt-2 mt-2 border-t border-t-[#D7D7D7]">
+                <div class="flex items-center justify-between h-[21px]">
+                  <span
+                    class="text-[12px]/[100%] text-[#212121] font-estedad-regular"
+                    >مبلغ ضمانت:</span
+                  >
+                  <span
+                    class="texy-[#212121] text-[12px]/[100%] font-number font-bold"
+                    >80 میلیون تومان</span
+                  >
+                </div>
+                <div class="w-full bg-[#194BF0] rounded-[8px] h-10 mt-2">
+                  <a
+                    class="w-full h-full text-[14px]/[180%] text-white font-estedad-medium flex justify-center items-center"
+                    href="#"
+                    >درخواست رزرو</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- car card 5  -->
+            <div
+              href="#"
+              class="p-4 bg-white lg:w-[392px] sm:w-[300px] xs:w-[226px] w-[300px] rounded-[16px]"
+            >
+              <div class="rounded-[12px] mb-2">
+                <img
+                  class="w-full"
+                  src="./public/images/main/section4/car5.png"
+                  alt="car"
+                />
+              </div>
+              <span
+                class="text-black text-[16px]/[140%] font-estedad-ExtraBold mb-2"
+              >
+                اجاره هیوندای توسان 2014</span
+              >
+              <p class="text-[12px]/[180%] text-[#868686] my-2">
+                مدل : <span class="text-[#494949] font-number mb-2">2016</span>
+              </p>
+              <div
+                class="w-full h-11 bg-[#F3F3F3] p-2 rounded-[8px] flex items-center mb-2"
+              >
+                <div class="w-full h-full flex justify-between items-center">
+                  <p
+                    class="text-[#212121] text-[12px]/[180%] flex items-center gap-2 font-number"
+                  >
+                    از 1 تا 30 روز:
+                    <span
+                      class="text-[#194BF0] sm:text-[16px]/[100%] text-sm font-number font-bold"
+                      >8,500,000</span
+                    >
+                  </p>
+                  <span
+                    class="text-[12px]/[180%] text-[#494949] font-estedad-regular"
+                    >روزانه</span
+                  >
+                </div>
+              </div>
+              <div
+                class="w-full h-11 bg-[#F3F3F3] p-2 rounded-[8px] flex items-center"
+              >
+                <div class="w-full h-full flex justify-between items-center">
+                  <p
+                    class="text-[#212121] text-[12px]/[180%] flex items-center gap-2 font-number"
+                  >
+                    از 1 تا 30 روز:
+                    <span
+                      class="text-[#194BF0] sm:text-[16px]/[100%] text-sm font-number font-bold"
+                      >8,500,000</span
+                    >
+                  </p>
+                  <span
+                    class="text-[12px]/[180%] text-[#494949] font-estedad-regular"
+                    >روزانه</span
+                  >
+                </div>
+              </div>
+
+              <div class="pt-2 mt-2 border-t border-t-[#D7D7D7]">
+                <div class="flex items-center justify-between h-[21px]">
+                  <span
+                    class="text-[12px]/[100%] text-[#212121] font-estedad-regular"
+                    >مبلغ ضمانت:</span
+                  >
+                  <span
+                    class="texy-[#212121] text-[12px]/[100%] font-number font-bold"
+                    >80 میلیون تومان</span
+                  >
+                </div>
+                <div class="w-full bg-[#194BF0] rounded-[8px] h-10 mt-2">
+                  <a
+                    class="w-full h-full text-[14px]/[180%] text-white font-estedad-medium flex justify-center items-center"
+                    href="#"
+                    >درخواست رزرو</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- car card 6  -->
+            <div
+              href="#"
+              class="p-4 bg-white lg:w-[392px] sm:w-[300px] xs:w-[226px] w-[300px] rounded-[16px]"
+            >
+              <div class="rounded-[12px] mb-2">
+                <img
+                  class="w-full"
+                  src="./public/images/main/section4/car6.png"
+                  alt="car"
+                />
+              </div>
+              <span
+                class="text-black text-[16px]/[140%] font-estedad-ExtraBold mb-2"
+                >اجاره بنز sl کروک</span
+              >
+              <p class="text-[12px]/[180%] text-[#868686] my-2">
+                مدل : <span class="text-[#494949] font-number mb-2">2016</span>
+              </p>
+              <div
+                class="w-full h-11 bg-[#F3F3F3] p-2 rounded-[8px] flex items-center mb-2"
+              >
+                <div class="w-full h-full flex justify-between items-center">
+                  <p
+                    class="text-[#212121] text-[12px]/[180%] flex items-center gap-2 font-number"
+                  >
+                    از 1 تا 30 روز:
+                    <span
+                      class="text-[#194BF0] sm:text-[16px]/[100%] text-sm font-number font-bold"
+                      >8,500,000</span
+                    >
+                  </p>
+                  <span
+                    class="text-[12px]/[180%] text-[#494949] font-estedad-regular"
+                    >روزانه</span
+                  >
+                </div>
+              </div>
+              <div
+                class="w-full h-11 bg-[#F3F3F3] p-2 rounded-[8px] flex items-center"
+              >
+                <div class="w-full h-full flex justify-between items-center">
+                  <p
+                    class="text-[#212121] text-[12px]/[180%] flex items-center gap-2 font-number"
+                  >
+                    از 1 تا 30 روز:
+                    <span
+                      class="text-[#194BF0] sm:text-[16px]/[100%] text-sm font-number font-bold"
+                      >8,500,000</span
+                    >
+                  </p>
+                  <span
+                    class="text-[12px]/[180%] text-[#494949] font-estedad-regular"
+                    >روزانه</span
+                  >
+                </div>
+              </div>
+
+              <div class="pt-2 mt-2 border-t border-t-[#D7D7D7]">
+                <div class="flex items-center justify-between h-[21px]">
+                  <span
+                    class="text-[12px]/[100%] text-[#212121] font-estedad-regular"
+                    >مبلغ ضمانت:</span
+                  >
+                  <span
+                    class="texy-[#212121] text-[12px]/[100%] font-number font-bold"
+                    >80 میلیون تومان</span
+                  >
+                </div>
+                <div class="w-full bg-[#194BF0] rounded-[8px] h-10 mt-2">
+                  <a
+                    class="w-full h-full text-[14px]/[180%] text-white font-estedad-medium flex justify-center items-center"
+                    href="#"
+                    >درخواست رزرو</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
     <div
       id="greyBg"
       class="hidden w-screen h-screen bg-black/45 absolute top-0 right-0 left-0"
     ></div>
-    <!-- git hub  -->
+    <!-- git hub calender  -->
     <script
       type="text/javascript"
       src="./jalalidatepicker/dist/jalalidatepicker.min.js"
     ></script>
     <!-- header script  -->
     <script src="./src/header.js"></script>
-    <script>
-      jalaliDatepicker.startWatch({
-        autoShow: false,
-      });
-      const inputList = document.querySelectorAll("input[data-jdp]");
-      for (i = 0; i < inputList.length; i++) {
-        inputList[i].addEventListener("focus", function () {
-          let defaults = {
-            date: true,
-            time: false,
-            dayRendering: null,
-          };
-          if (this.hasAttribute("data-jdp-option-1")) {
-            jalaliDatepicker.updateOptions({
-              date: true,
-              time: false,
-              persianDigits: true,
-              minDate: "today",
-            });
-          } else if (this.hasAttribute("data-jdp-option-2")) {
-            jalaliDatepicker.updateOptions({
-              date: false,
-              time: true,
-              hasSecond: false,
-              persianDigits: true,
-            });
-          } else if (this.hasAttribute("data-jdp-option-3")) {
-            jalaliDatepicker.updateOptions({
-              date: true,
-              time: false,
-              persianDigits: true,
-              minDate: "today",
-            });
-          } else if (this.hasAttribute("data-jdp-option-4")) {
-            jalaliDatepicker.updateOptions({
-              date: false,
-              time: true,
-              hasSecond: false,
-              persianDigits: true,
-            });
-          } else {
-            jalaliDatepicker.updateOptions(defaults);
-          }
-          jalaliDatepicker.show(this);
-        });
-      }
-    </script>
+    <!-- swiper script  -->
+    <script src="./swiper/swiper-bundle.min.js"></script>
+    <!-- main script -->
+    <script src="./src/main.js"></script>
   </body>
 </html>

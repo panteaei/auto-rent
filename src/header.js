@@ -26,24 +26,7 @@ greyBg.classList.add("hidden")
 
 })
 
-// customazing the select element in reserving
-// const locSelect = document.getElementById("location__select") 
-// const locArrow = document.getElementById("location__arrow")
-// const locList = document.getElementById("location__list")
-// const header = document.getElementById("header")
-// locSelect.addEventListener("click" , ()=>{
-   
-//     locList.classList.toggle("hidden")
-//     // rotating the arrow 
-//     locArrow.classList.toggle("rotate-180")
-// })
-// header.addEventListener("click" , ()=> {
-   
-// if (!locList.classList.contains("hidden")) {
-//     locList.classList.add("hidden")
-// }
-   
-// })
+
 
   const locationSelect = document.getElementById('location__select');
   const locationList = document.getElementById('location__list');
@@ -74,6 +57,53 @@ greyBg.classList.add("hidden")
       locationArrow.classList.remove('rotate-180');
     });
   });
+
+  // تنظیمات انتخاب ساعت و تاریخ 
+    jalaliDatepicker.startWatch({
+        autoShow: false,
+      });
+      const inputList = document.querySelectorAll("input[data-jdp]");
+      for (i = 0; i < inputList.length; i++) {
+        inputList[i].addEventListener("focus", function () {
+          let defaults = {
+            date: true,
+            time: false,
+            dayRendering: null,
+          };
+          if (this.hasAttribute("data-jdp-option-1")) {
+            jalaliDatepicker.updateOptions({
+              date: true,
+              time: false,
+              persianDigits: true,
+              minDate: "today",
+            });
+          } else if (this.hasAttribute("data-jdp-option-2")) {
+            jalaliDatepicker.updateOptions({
+              date: false,
+              time: true,
+              hasSecond: false,
+              persianDigits: true,
+            });
+          } else if (this.hasAttribute("data-jdp-option-3")) {
+            jalaliDatepicker.updateOptions({
+              date: true,
+              time: false,
+              persianDigits: true,
+              minDate: "today",
+            });
+          } else if (this.hasAttribute("data-jdp-option-4")) {
+            jalaliDatepicker.updateOptions({
+              date: false,
+              time: true,
+              hasSecond: false,
+              persianDigits: true,
+            });
+          } else {
+            jalaliDatepicker.updateOptions(defaults);
+          }
+          jalaliDatepicker.show(this);
+        });
+      }
 
 
 

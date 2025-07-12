@@ -81,7 +81,7 @@
 }
 
 @theme {
-  /*fonts*/
+  /* fonts  */
   --font-estedad-black: "Estedad-black", "sans-serif";
   --font-estedad-bold: "Estedad-bold", "sans-serif";
   --font-estedad-ExtraBold: "Estedad-ExtraBold", "sans-serif";
@@ -94,7 +94,8 @@
   --font-number: "number", "sans-serif";
   /*break points*/
   --breakpoint-xs: 30rem; /* (width >= 30rem) 30rem = 480px */
-  --breakpoint-custom-md: 57rem; /* (width >= 57) 57 = 912px */
+  --breakpoint-custom-md: 57rem; /* (width >= 57rem) 57 = 912px */
+  --breakpoint-custom-xl: 83rem;  /* (width >= 83rem) 83rem = 1328px */
 }
 
 /* customizing the search input in mobile  */

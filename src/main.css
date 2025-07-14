@@ -95,7 +95,9 @@
   /*break points*/
   --breakpoint-xs: 30rem; /* (width >= 30rem) 30rem = 480px */
   --breakpoint-custom-md: 57rem; /* (width >= 57rem) 57 = 912px */
-  --breakpoint-custom-xl: 83rem;  /* (width >= 83rem) 83rem = 1328px */
+  --breakpoint-custom-lg: 73rem; /* (width >= 73rem) 73 = 1168px */
+  --breakpoint-custom-xl: 83rem; /* (width >= 83rem) 83rem = 1328px */
+  --breakpoint-design: 90rem; /* (width >= 90rem) 90rem = 1440px UI design */ 
 }
 
 /* customizing the search input in mobile  */
@@ -174,7 +176,112 @@
 
 .swiper-slide img {
   display: block;
- 
+
   height: 100%;
   object-fit: cover;
 }
+/* استایل هندل در صفحه ی reserve.html  */
+.noUi-handle {
+  border-radius: 100% !important; /* makes it circular */
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #ffffff !important; /* pure white */
+  border: 1.5px solid #ccc !important; /* light gray border */
+  box-shadow: none !important; /* remove shadow for clean look */
+
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.noUi-handle:hover,
+.noUi-handle:focus {
+  border-color: #999 !important; /* slightly darker border on hover/focus */
+  outline: none;
+}
+.noUi-handle-upper {
+  right: 0px;
+}
+.noUi-handle:before,
+.noUi-handle:after {
+  display: none;
+}
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
+  left: -11px !important;
+}
+/* استایل مابین هندل ها */
+.noUi-connect {
+  background-color: #194bf0; /* The bright blue color */
+  border-radius: 4px; /* Rounded corners to match the track */
+  height: 100%; /* Fill the entire track height */
+  width: 100%;
+}
+.noUi-target {
+  width: 218px !important;
+  height: 8px !important; /* ارتفاع کل نوار */
+  border-radius: 32px !important; /* گرد بودن لبه‌ها */
+  background-color: white; /* رنگ زمینه قسمت خالی */
+}
+
+/* styling the check boxes for brands in reserve.html  */
+.checkBoxes {
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #aeaeae;
+  border-radius: 4px;
+
+  &:checked {
+    border: none;
+    background-color: #194bf0;
+  }
+  &:checked::before {
+    transform: scale(1);
+  }
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    clip-path: polygon(28% 38%, 41% 53%, 75% 24%, 86% 38%, 40% 78%, 15% 50%);
+    transform: scale(0);
+    background-color: white;
+  }
+}
+/* styling the radioBtns for اجاره in reserve.html  */
+.radioBtns {
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 1px solid #aeaeae;
+
+  &:checked::before {
+    transform: scale(1);
+  }
+  &::before {
+    content: "";
+    width: 10.67px;
+    height: 10.67px;
+    clip-path: circle(50% at 50% 50%);
+    transform: scale(0);
+    background-color: #194bf0;
+  }
+}
+/* styling scroll bars  */
+.carCardsScrollBar{
+  scrollbar-width: thin;
+  direction: ltr;
+  .carCard{
+    direction: rtl;
+  }
+}
+

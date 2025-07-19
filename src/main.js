@@ -89,3 +89,56 @@ hide(paragraph3 , plus3 , minus3)
 show(paragraph4 , plus4 , minus4)
 hide(paragraph4 , plus4 , minus4)
 
+//section 7 
+// swiper for reviews 
+var swiper = new Swiper(".reviews_swiper", {
+  slidesPerView: 1, // مقدار پیش‌فرض برای موبایل
+  spaceBetween: 0,
+  breakpoints: {
+    380: {
+      // برای 'گوشی'
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    480: {
+      // برای گوشی
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    604: {
+      // برای تبلت
+      slidesPerView: 2,
+      spaceBetween:0 ,
+    },
+    768: {
+      // برای تبلت
+      slidesPerView: 2,
+      spaceBetween: 1,
+    },
+        896: {
+      // برای تبلت
+      slidesPerView: 3,
+      spaceBetween: 1,
+    },
+    1024: {
+      // برای تبلت
+      slidesPerView: 3,
+      spaceBetween: 1,
+    },
+        1222: {
+      // برای تبلت
+      slidesPerView: 4,
+      spaceBetween: 1,
+    },
+    1280: {
+      // برای دسکتاپ کوچک
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+
+  },
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
+});

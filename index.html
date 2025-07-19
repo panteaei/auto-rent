@@ -29,7 +29,7 @@
       >
         <!-- nav bar  -->
         <nav
-          class="md:h-auto lg:h-24 xl:w-[1224px] w-full bg-white xl:rounded-b-[16px] rounded-none md:fixed md:top-0 md:right-0 md:left-0 lg:mx-[auto] flex justify-between items-center lg:px-8 md:py-[18.5px] py-3 md:px-6 px-4 mb-1.5 md:mb-0 md:shadow-2xs z-1000"
+          class="relative md:h-auto lg:h-24 xl:w-[1224px] w-full bg-white xl:rounded-b-[16px] rounded-none md:fixed md:top-0 md:right-0 md:left-0 lg:mx-[auto] flex justify-between items-center lg:px-8 md:py-[18.5px] py-3 md:px-6 px-4 mb-1.5 md:mb-0 md:shadow-2xs z-1000"
         >
           <!-- hamb icon for mobile -->
           <div class="md:hidden block cursor-pointer" id="hamb">
@@ -39,7 +39,7 @@
             />
           </div>
           <!-- auto rent logo -->
-          <div class="w-[100px] md:w-[140px] lg:w-auto">
+          <div class="w-[100px] md:w-[140px] lg:w-auto cursor-pointer">
             <img src="./public/images/header/Logo.png" alt="auto rent logo" />
           </div>
 
@@ -65,7 +65,7 @@
               /></a>
             </li>
             <li
-              class="outline-0 order-2 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 md:hover:bg-white transition-colors"
+              class="outline-0 order-2 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 md:hover:bg-white transition-colors hover:text-gray-400"
             >
               <a
                 class="w-full h-full md:w-auto md:h-auto flex items-center gap-3 md:block md:gap-0"
@@ -80,7 +80,7 @@
               >
             </li>
             <li
-              class="order-3 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 md:hover:bg-white transition-colors"
+              class="order-3 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 md:hover:bg-white transition-colors hover:text-gray-400"
             >
               <a
                 class="w-full h-full md:w-auto md:h-auto flex items-center gap-3 md:block md:gap-0"
@@ -95,7 +95,7 @@
               >
             </li>
             <li
-              class="order-4 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 md:hover:bg-white transition-colors"
+              class="order-4 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 md:hover:bg-white transition-colors hover:text-gray-400"
             >
               <a
                 class="w-full h-full md:w-auto md:h-auto flex items-center gap-3 md:block md:gap-0"
@@ -110,7 +110,7 @@
               >
             </li>
             <li
-              class="order-5 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 md:hover:bg-white transition-colors"
+              class="order-5 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 md:hover:bg-white transition-colors hover:text-gray-400"
             >
               <a
                 class="w-full h-full md:w-auto md:h-auto flex items-center gap-3 md:block md:gap-0"
@@ -125,7 +125,7 @@
               >
             </li>
             <li
-              class="order-6 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 md:hover:bg-white transition-colors"
+              class="order-6 md:order-none h-12 md:h-auto bg-white hover:bg-blue-200 md:hover:bg-white transition-colors hover:text-gray-400"
             >
               <a
                 class="w-full h-full md:w-auto md:h-auto flex items-center gap-3 md:block md:gap-0"
@@ -139,22 +139,19 @@
                 تماس با ما</a
               >
             </li>
-            <li class="order-1 md:order-none hidden md:block">
-              <form action="#" method="get" class="w-6 h-6">
-                <input type="search" class="hidden" />
-                <button class="w-6 h-6 cursor-pointer" type="submit">
-                  <img
-                    class="w-6 h-6"
-                    src="./public/images/header/search-outline.png"
-                    alt="search button"
-                  />
-                </button>
-              </form>
+            <li class="order-1 md:order-none hidden md:block hover:scale-110">
+              <img
+                id="searchBtn"
+                class="w-6 h-6 cursor-pointer"
+                src="./public/images/header/search-outline.png"
+                alt="search button"
+              />
             </li>
           </ul>
           <a
+            id="loginBox"
             href="#"
-            class="flex items-center gap-1 md:gap-0 md:block h-10 md:px-4 md:py-[6px] md:bg-[#194BF0] rounded-lg font-estedad-light"
+            class="flex items-center gap-1 md:gap-0 md:block h-10 md:px-4 md:py-[6px] md:bg-[#194BF0] md:hover:bg-blue-600 rounded-lg font-estedad-light"
           >
             <span
               class="hidden md:inline-block text-[16px] md:text-white leading-6"
@@ -169,6 +166,123 @@
               alt="login icon"
             />
           </a>
+          <!-- wrapper for searching contents in desktop -->
+          <div
+            id="searchWrapper"
+            class="hidden absolute top-6 lg:left-[136px] lg:right-[206px] left-0 xl:w-[884px] custom-lg:w-[900px] lg:w-[690px] md:w-[563px] custom-md:w-[718px] xl:h-[333px] z-10000 flex-col gap-y-6 bg-white rounded-[16px] rounded-bl-[0px] lg:rounded-bl-[16px] p-4"
+          >
+            <form action="#" method="get" class="w-full">
+              <div
+                class="flex items-center gap-x-2 w-full pb-6 border-b border-b-[#D7D7D7]"
+              >
+                <button class="w-6 h-6 cursor-pointer" type="submit">
+                  <img
+                    class="w-6 h-6 outline-0"
+                    src="./public/images/header/search-outline.png"
+                    alt="search button"
+                  />
+                </button>
+                <input
+                  type="search"
+                  class="block h-7 w-full placeholder:text-[#C2C2C2] placeholder:text-[16px]/[100%] placeholder:font-estedad-medium outline-0"
+                  name="search_content"
+                  placeholder="جستجو"
+                />
+              </div>
+            </form>
+            <!-- wrapper of history of searching and favorites  -->
+            <div class="w-full">
+              <!-- wrapper for search history  -->
+              <div class="w-full mb-[41px]" id="searchH">
+                <div class="w-full flex items-center justify-between">
+                  <div class="flex items-center gap-x-2">
+                    <img src="./public/images/header/clock.png" alt="clock" />
+                    <spanc
+                      class="text-[16px]/[100%] text-[#494949] font-estedad-medium"
+                      >تاریخچه جستجوهای شما</spanc
+                    >
+                  </div>
+                  <img
+                    id="bin"
+                    src="./public/images/header/hugeicons_delete-02.png"
+                    alt="icon"
+                    class="cursor-pointer"
+                  />
+                </div>
+                <div class="mt-6 flex items-center gap-x-2">
+                  <span
+                    class="border border-[#F3F3F3] xl:px-[10px] px-[2px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer flex justify-between items-center"
+                    >بنز S500</span
+                  >
+                  <span
+                    class="border border-[#F3F3F3] xl:px-[10px] px-[2px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer flex justify-between items-center"
+                  >
+                    DS 3</span
+                  >
+                  <span
+                    class="border border-[#F3F3F3] xl:px-[10px] px-[2px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer flex justify-between items-center"
+                  >
+                    Rolls Royce Cullinan</span
+                  >
+                  <span
+                    class="border border-[#F3F3F3] xl:px-[10px] px-[2px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer flex justify-between items-center"
+                    >پرشیا ELX سفید
+                  </span>
+                  <span
+                    class="border border-[#F3F3F3] xl:px-[10px] px-[2px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer flex justify-between items-center"
+                    >Tiggo 8 Pro
+                  </span>
+                </div>
+              </div>
+              <!-- wrapper for favorites  -->
+              <div class="w-full">
+                <div class="w-full flex items-center">
+                  <div class="flex items-center gap-x-2">
+                    <img
+                      src="./public/images/header/heart-search.png"
+                      alt="clock"
+                    />
+                    <spanc
+                      class="text-[16px]/[100%] text-[#494949] font-estedad-medium"
+                      >جستجوهای پرطرفدار
+                    </spanc>
+                  </div>
+                </div>
+                <div class="mt-6 flex items-center gap-x-2">
+                  <span
+                    class="border border-[#F3F3F3] px-[10px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer"
+                  >
+                    Ferrari Roma</span
+                  >
+                  <span
+                    class="border border-[#F3F3F3] px-[10px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer"
+                  >
+                    Peugeot 2008</span
+                  >
+                  <span
+                    class="border border-[#F3F3F3] px-[10px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer"
+                  >
+                    Audi A8</span
+                  >
+                  <span
+                    class="border border-[#F3F3F3] px-[10px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer"
+                  >
+                    بنز S500
+                  </span>
+                  <span
+                    class="border border-[#F3F3F3] px-[10px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer"
+                  >
+                    پرشیا ELX سفید
+                  </span>
+                  <span
+                    class="border border-[#F3F3F3] px-[10px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer"
+                  >
+                    بنز S500
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </nav>
         <!-- search btn and reserve btn and calling btn for mobile wrapper -->
         <div
@@ -186,16 +300,14 @@
             </svg>
             <input class="search__input" type="search" placeholder="جستجو..." />
           </div>
-          <!-- reserve car content -->
-          <a
-            class="text-xs font-estedad-light text-[#05164D] hover:bg-[#194BF0] hover:border-0 transition-all hover:text-white px-4 py-[7px] border border-[#05164D] rounded-[48px] w-auto sm:w-[120px] text-center"
-            href="#"
-            >اجاره خودرو</a
-          >
+
           <!-- calling btn  -->
-          <a href="#" class="hidden xs:block">
+          <a
+            href="#"
+            class="sm:hidden flex mr-5 p-1.5 w-[38px] rounded-[100%] border border-[#05164D] hover:scale-95 justify-center items-center"
+          >
             <img
-              class="w-7 sm:w-auto border border-[#05164D] rounded-md hover:rounded-xl transition-all p-1"
+              class="w-5 h-5"
               src="./public/images/header/call-calling.png"
               alt="call icon"
           /></a>
@@ -226,7 +338,7 @@
             </p>
             <div class="md:flex md:gap-2 md:mt-4">
               <a
-                class="hidden md:inline-flex md:justify-center md:items-center md:gap-1.5 md:py-2 md:px-4 md:bg-[#FDB713] md:rounded-md font-estedad-regular font-bold"
+                class="hidden md:inline-flex md:justify-center md:items-center md:gap-1.5 md:py-2 md:px-4 md:bg-[#FDB713] md:hover:bg-amber-500 md:rounded-md font-estedad-regular font-bold"
                 href="#"
               >
                 <img
@@ -237,7 +349,7 @@
                 رزرو آسان خودرو
               </a>
               <a
-                class="hidden md:inline-flex md:justify-center md:items-center md:gap-1.5 md:py-2 md:px-4 lg:border lg:border-white md:bg-[#194BF0] md:rounded-md md:font-estedad-ExtraLight font-bold md:text-white"
+                class="hidden md:inline-flex md:justify-center md:items-center md:gap-1.5 md:py-2 md:px-4 md:border md:border-white md:bg-none md:hover:scale-105 md:rounded-md md:font-estedad-ExtraLight font-bold md:text-white"
                 href="#"
               >
                 <img
@@ -248,9 +360,9 @@
 
                 تماس با ما
               </a>
-              <!--btn for mobile  -->
+              <!--call btn for mobile  -->
               <a
-                class="inline-flex md:hidden justify-center items-center gap-1.5 py-2 px-4 bg-[#FDB713] hover:bg-amber-300 transition-all rounded-[48px] font-estedad-regular text-[11px] mt-3"
+                class="sm:inline-flex md:hidden hidden justify-center items-center gap-1.5 py-2 px-4 bg-[#FDB713] hover:bg-amber-300 transition-all rounded-[48px] font-estedad-regular text-[11px] mt-3"
                 href="#"
               >
                 تماس با ما
@@ -258,6 +370,19 @@
                   src="./public/images/header/call-calling.png"
                   alt="arrow icon"
                   class="w-4 h-4"
+                />
+              </a>
+              <!--resrve btn for mobile  -->
+
+              <a
+                class="inline-flex md:hidden justify-center items-center gap-1.5 py-2 px-4 bg-[#FDB713] hover:bg-amber-300 transition-all rounded-[48px] font-estedad-regular xs:text-[11px] text-[10px] mt-3"
+                href="#"
+              >
+                رزرو آسان خودرو
+                <img
+                  src="./public/images/header/left-arrow-30.png"
+                  alt="arrow icon"
+                  class="w-4 h-4 hidden xs:block"
                 />
               </a>
             </div>
@@ -1571,16 +1696,44 @@
               نظرات <span class="text-[#D79C10]">مشتریان</span>
             </h3>
           </div>
-          <!-- section 7 - part 1  -->
+          <!-- section 7 - part 2  -->
           <!-- wrapper  -->
           <div class="w-full mt-6">
+            <!-- big review  -->
             <div
-              class="w-full rounded-[16px] border border-[#D7D7D7] bg-white flex flex-col items-center gap-6 p-4"
+              class="w-full xl:rounded-[16px] border border-[#D7D7D7] bg-white flex flex-col items-center p-4 xl:mb-6"
             >
-              <img
-                src="./public/images/main/section7/person1-big.png"
-                alt="review"
-              />
+              <!-- big review - part 1  -->
+              <div
+                class="flex flex-col gap-2 justify-start items-center w-[136px] h-[228px]"
+              >
+                <!-- big picture  -->
+                <div class="">
+                  <div
+                    class="w-[136px] h-[136px] border-[5px] border-[#194BF0] rounded-[100%] overflow-hidden flex justify-center items-center"
+                  >
+                    <img
+                      class="w-full h-full"
+                      src="./public/images/main/section7/pic1.jpg"
+                      alt="reviwe pic"
+                    />
+                  </div>
+                </div>
+                <!-- name of the person  -->
+                <span
+                  class="text-[#0C0C0C] text-[16px]/[100%] font-estedad-medium text-center"
+                  >اولدوز بهاور</span
+                >
+                <!-- stars  -->
+                <div>
+                  <img
+                    class="goldenStar"
+                    src="./public/images/main/section7/stars.png"
+                    alt="stars"
+                  />
+                </div>
+              </div>
+              <!-- big review - part 2  -->
               <div>
                 <p
                   class="text-[#727272] text-[14px]/[180%] font-estedad-light max-w-[594px] w-full text-center"
@@ -1598,29 +1751,191 @@
                 </p>
               </div>
             </div>
-            <div
-              class="flex xl:justify-between justify-center flex-wrap xl:flex-nowrap custom-xl:gap-6 mt-6"
-            >
-              <img
-                class="max-w-[288px] w-full"
-                src="./public/images/main/section7/person1.png"
-                alt="review"
-              />
-              <img
-                class="max-w-[288px] w-full"
-                src="./public/images/main/section7/person2.png"
-                alt="review"
-              />
-              <img
-                class="max-w-[288px] w-full"
-                src="./public/images/main/section7/person3.png"
-                alt="review"
-              />
-              <img
-                class="max-w-[288px] w-full"
-                src="./public/images/main/section7/person4.png"
-                alt="review"
-              />
+            <!-- small reviews wrapper  -->
+            <div class="w-full px-3 xl:px-0 xl:h-[96px] h-[167px]">
+              <!-- Slider main container -->
+              <div class="swiper reviews_swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <!-- slide 1  -->
+                  <div class="swiper-slide w-[288px]">
+                    <!-- person 1 wrapper  -->
+                    <div
+                      class="w-[288px] h-[96px] bg-[#FDB713] cursor-pointer p-4 rounded-[16px] border border-[#D7D7D7]"
+                    >
+                      <!-- person 1 additional wrapper  -->
+                      <div
+                        class="w-[256px] h-full flex justify-center items-center gap-4"
+                      >
+                        <!-- pic  -->
+                        <div class="w-16 h-16 rounded-full overflow-hidden">
+                          <img
+                            class="w-full h-full"
+                            src="./public/images/main/section7/pic1.jpg"
+                            alt="review"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col items-start justify-start gap-2"
+                        >
+                          <span
+                            class="text-[16px]/[100%] text-[#212121] font-estedad-medium"
+                            >اولدوز بهاور</span
+                          >
+                          <span
+                            class="text-[14px]/[180%] text-[#494949] font-estedad-medium"
+                            ><span class="font-number font-light">27</span> دی
+                            ماه <span class="font-number">1380</span></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 2  -->
+                  <div class="swiper-slide w-[288px]">
+                    <!-- person 2 wrapper  -->
+
+                    <div
+                      class="w-[288px] h-[96px] bg-[#FDB713] cursor-pointer p-4 rounded-[16px] border border-[#D7D7D7]"
+                    >
+                      <!-- person 2 additional wrapper  -->
+                      <div
+                        class="w-[256px] h-full flex justify-center items-center gap-4"
+                      >
+                        <!-- pic  -->
+                        <div class="w-16 h-16 rounded-full overflow-hidden">
+                          <img
+                            class="w-full h-full"
+                            src="./public/images/main/section7/pic2.jpg"
+                            alt="review"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col items-start justify-start gap-2"
+                        >
+                          <span
+                            class="text-[16px]/[100%] text-[#212121] font-estedad-medium"
+                            >محمدجواد امینی
+                          </span>
+                          <span
+                            class="text-[14px]/[180%] text-[#494949] font-estedad-medium"
+                            ><span class="font-number font-light">27</span> دی
+                            ماه <span class="font-number">1380</span></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 3  -->
+                  <div class="swiper-slide w-[288px]">
+                    <!-- person 3 wrapper  -->
+
+                    <div
+                      class="w-[288px] h-[96px] bg-white cursor-pointer p-4 rounded-[16px] border border-[#D7D7D7]"
+                    >
+                      <!-- person 3 additional wrapper  -->
+                      <div
+                        class="w-[256px] h-full flex justify-center items-center gap-4"
+                      >
+                        <!-- pic  -->
+                        <div class="w-16 h-16 rounded-full overflow-hidden">
+                          <img
+                            class="w-full h-full"
+                            src="./public/images/main/section7/pic3.jpg"
+                            alt="review"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col items-start justify-start gap-2"
+                        >
+                          <span
+                            class="text-[16px]/[100%] text-[#212121] font-estedad-medium"
+                            >فرزانه حیدری
+                          </span>
+                          <span
+                            class="text-[14px]/[180%] text-[#494949] font-estedad-medium"
+                            ><span class="font-number font-light">27</span> دی
+                            ماه <span class="font-number">1380</span></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 4  -->
+                  <div class="swiper-slide w-[288px]">
+                    <!-- person 4 wrapper  -->
+
+                    <div
+                      class="w-[288px] h-[96px] bg-white cursor-pointer p-4 rounded-[16px] border border-[#D7D7D7]"
+                    >
+                      <!-- person 4 additional wrapper  -->
+                      <div
+                        class="w-[256px] h-full flex justify-center items-center gap-4"
+                      >
+                        <!-- pic  -->
+                        <div class="w-16 h-16 rounded-full overflow-hidden">
+                          <img
+                            class="w-full h-full"
+                            src="./public/images/main/section7/pic4.jpg"
+                            alt="review"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col items-start justify-start gap-2"
+                        >
+                          <span
+                            class="text-[16px]/[100%] text-[#212121] font-estedad-medium"
+                            >فاطمه ابراهیمی‌فر
+                          </span>
+                          <span
+                            class="text-[14px]/[180%] text-[#494949] font-estedad-medium"
+                            ><span class="font-number font-light">27</span> دی
+                            ماه <span class="font-number">1380</span></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- slide 5  -->
+                  <div class="swiper-slide w-[288px]">
+                    <!-- person 4 wrapper  -->
+
+                    <div
+                      class="w-[288px] h-[96px] bg-white cursor-pointer p-4 rounded-[16px] border border-[#D7D7D7]"
+                    >
+                      <!-- person 4 additional wrapper  -->
+                      <div
+                        class="w-[256px] h-full flex justify-center items-center gap-4"
+                      >
+                        <!-- pic  -->
+                        <div class="w-16 h-16 rounded-full overflow-hidden">
+                          <img
+                            class="w-full h-full"
+                            src="./public/images/main/section7/pic4.jpg"
+                            alt="review"
+                          />
+                        </div>
+                        <div
+                          class="flex flex-col items-start justify-start gap-2"
+                        >
+                          <span
+                            class="text-[16px]/[100%] text-[#212121] font-estedad-medium"
+                            >فاطمه ابراهیمی‌فر
+                          </span>
+                          <span
+                            class="text-[14px]/[180%] text-[#494949] font-estedad-medium"
+                            ><span class="font-number font-light">27</span> دی
+                            ماه <span class="font-number">1380</span></span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- pagination  -->
+                <div class="swiper-pagination mt-2.5 xl:hidden"></div>
+              </div>
             </div>
           </div>
         </section>
@@ -1794,149 +2109,159 @@
             </div>
           </div>
         </section>
-        <!-- footer  -->
-        <footer class="w-full flex justify-center mt-20">
-          <!-- wrapper of footer  -->
-          <div
-            class="max-w-[1224px] w-full bg-[#1E1E1EE5] rounded-[16px] flex flex-col items-center px-4 py-[41px]"
-          >
-            <!-- wrapper of part 1 & 2  -->
-            <div class="w-full flex flex-col items-center">
-              <!-- part 1  -->
-              <div
-                class="border border-[#868686] rounded-[16px] p-4 flex justify-between items-center flex-col sm:flex-row max-w-[1120px] w-full"
-              >
-                <!-- telephone  -->
-                <div
-                  class="sm:gap-4 h-[69px] items-center max-w-[254px] sm:w-[30%] w-[70%] flex sm:justify-center justify-between"
-                >
-                  <img
-                    class="md:w-12 md:h-12 w-[41px] h-[41px]"
-                    src="./public/images/footer/call.png"
-                    alt="calling icon"
-                  />
-                  <div class="flex flex-col gap-3 w-[124px] sm:w-auto text-center sm:text-start">
-                    <span
-                      class="text-[#FFFBFB] md:text-[16px]/[168%] text-[14px] font-estedad-regular text-center"
-                      >ارتباط با ما</span
-                    >
-                    <span class="font-number text-white md:text-[16px]/[168%] text-[14px]"
-                      >0912-21326545</span
-                    >
-                  </div>
-                </div>
-                <!-- email  -->
-                <div
-                  class="sm:gap-4 h-[69px] items-center max-w-[254px] sm:w-[30%] w-[70%] flex sm:justify-center justify-between"
-                >
-                  <img
-                    class="md:w-12 md:h-12 w-[41px] h-[41px]"
-                    src="./public/images/footer/mail.png"
-                    alt="mail to icon"
-                  />
-                  <div class="flex flex-col gap-3 w-[124px] sm:w-auto text-center sm:text-start">
-                    <span
-                      class="text-[#FFFBFB] md:text-[16px]/[168%] text-[14px] font-estedad-regular text-center"
-                    >
-                      ایمیل</span
-                    >
-                    <span
-                      class="font-estedad-regular text-white md:text-[16px]/[168%] text-[14px]"
-                      >autorent@info.com</span
-                    >
-                  </div>
-                </div>
-                <!-- address  -->
-                <div
-                  class="sm:gap-4 h-[69px] items-center max-w-[254px] sm:w-[30%] w-[70%] flex sm:justify-center justify-between"
-                >
-                  <img
-                    class="md:w-12 md:h-12 w-[41px] h-[41px]"
-                    src="./public/images/footer/map.png"
-                    alt="calling icon"
-                  />
-                  <div class="flex flex-col gap-3 w-[124px] sm:w-auto text-center sm:text-start">
-                    <span
-                      class="text-[#FFFBFB] md:text-[16px]/[168%] text-[14px] font-estedad-regular text-center"
-                    >
-                      آدرس</span
-                    >
-                    <span class="font-number text-white md:text-[16px]/[168%] text-[14px]"
-                      >تهران- خ شادمان</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- part 2  -->
-              <div
-                class="flex flex-col lg:flex-row justify-between px-[67.5px] max-w-[1120px] w-full mt-4 pb-4 border-b border-b-[#868686]"
-              >
-                <!-- 1 -->
-                <div class="lg:max-w-[407px] w-full mb-5 lg:mb-0">
-                  <img src="./public/images/footer/Logo.png" alt="logo" />
-                  <p
-                    class="text-white text-[14px]/[180%] font-estedad-regular mt-6"
-                  >
-                    اتورنت با رویکرد اعتماد به مشتری، با در اختیار داشتن
-                    بزرگترین ناوگان خودرویی متشکل از انواع خودروهای صفر کیلومتر،
-                    اقتصادی تا تجاری در سراسر کشور ایران آماده خدمت‌رسانی به
-                    مشتریان است.
-                  </p>
-                </div>
-                <!-- 2 -->
-                <div
-                  class="flex flex-col gap-4 items-center lg:items-start text-white text-[14px]/[180%] font-estedad-regular"
-                >
-                  <span class="mb-2">دسترسی آسان</span>
-                  <span>سوالات متداول</span>
-                  <span>تماس با ما</span>
-                  <span>درباره ما</span>
-                </div>
-                <!-- 3 -->
-                <div class="max-w-[320px] w-full flex flex-col justify-center">
-                  <h5
-                    class="text-white text-[16px]/[241%] font-estedad-medium mb-3"
-                  >
-                    خبرنامه
-                  </h5>
-                  <form
-                    action="#"
-                    method="get"
-                    class="w-full flex justify-between items-center"
-                  >
-                    <div
-                      class="w-full border border-[#C2C2C2] rounded-[6px] py-1 px-[6px] h-10 flex justify-between items-center"
-                    >
-                      <input
-                        class="w-[70%] h-full placeholder:text-[#C2C2C2] placeholder:text-[12px]/[15px] outline-none placeholder:font-estedad-regular placeholder:pb-7 text-white"
-                        type="email"
-                        placeholder="ایمیل خود را وارد کنید"
-                      />
-                      <button
-                        type="submit"
-                        class="max-w-[66px] w-[25%] h-full bg-[#FDB713] rounded-[6px] text-[14px]/[180%] font-estedad-medium text-[#212121]"
-                      >
-                        ارسال
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <!-- wrapper of part 3  -->
-            <div class="flex justify-center items-end gap-2 h-[49px] w-full">
-              <img src="./public/images/footer/creative-commons.png" alt="cc" />
-              <p class="text-[#9A9A9A] text-[14px]/[180%] font-estedad-light">
-                تمامی حقوق این وبسایت متعلق به اتورنت می‌باشد
-              </p>
-            </div>
-          </div>
-        </footer>
       </div>
     </main>
+    <!-- footer  -->
+    <footer class="w-full flex justify-center">
+      <!-- wrapper of footer  -->
+      <div class="max-w-[1440px] w-full flex justify-center bg-gray-100 pt-20">
+        <!-- wrapper of contents of footer  -->
+        <div
+          class="max-w-[1224px] w-full bg-[#1E1E1EE5] rounded-[16px] flex flex-col items-center px-4 py-[41px]"
+        >
+          <!-- wrapper of part 1 & 2  -->
+          <div class="w-full flex flex-col items-center">
+            <!-- part 1  -->
+            <div
+              class="border border-[#868686] rounded-[16px] p-4 flex justify-between items-center flex-col sm:flex-row max-w-[1120px] w-full"
+            >
+              <!-- telephone  -->
+              <div
+                class="sm:gap-4 h-[69px] items-center max-w-[254px] sm:w-[30%] w-[70%] flex sm:justify-center justify-between"
+              >
+                <img
+                  class="md:w-12 md:h-12 w-[41px] h-[41px]"
+                  src="./public/images/footer/call.png"
+                  alt="calling icon"
+                />
+                <div
+                  class="flex flex-col gap-3 w-[124px] sm:w-auto text-center sm:text-start"
+                >
+                  <span
+                    class="text-[#FFFBFB] md:text-[16px]/[168%] text-[14px] font-estedad-regular text-center"
+                    >ارتباط با ما</span
+                  >
+                  <span
+                    class="font-number text-white md:text-[16px]/[168%] text-[14px]"
+                    >0912-21326545</span
+                  >
+                </div>
+              </div>
+              <!-- email  -->
+              <div
+                class="sm:gap-4 h-[69px] items-center max-w-[254px] sm:w-[30%] w-[70%] flex sm:justify-center justify-between"
+              >
+                <img
+                  class="md:w-12 md:h-12 w-[41px] h-[41px]"
+                  src="./public/images/footer/mail.png"
+                  alt="mail to icon"
+                />
+                <div
+                  class="flex flex-col gap-3 w-[124px] sm:w-auto text-center sm:text-start"
+                >
+                  <span
+                    class="text-[#FFFBFB] md:text-[16px]/[168%] text-[14px] font-estedad-regular text-center"
+                  >
+                    ایمیل</span
+                  >
+                  <span
+                    class="font-estedad-regular text-white md:text-[16px]/[168%] text-[14px]"
+                    >autorent@info.com</span
+                  >
+                </div>
+              </div>
+              <!-- address  -->
+              <div
+                class="sm:gap-4 h-[69px] items-center max-w-[254px] sm:w-[30%] w-[70%] flex sm:justify-center justify-between"
+              >
+                <img
+                  class="md:w-12 md:h-12 w-[41px] h-[41px]"
+                  src="./public/images/footer/map.png"
+                  alt="calling icon"
+                />
+                <div
+                  class="flex flex-col gap-3 w-[124px] sm:w-auto text-center sm:text-start"
+                >
+                  <span
+                    class="text-[#FFFBFB] md:text-[16px]/[168%] text-[14px] font-estedad-regular text-center"
+                  >
+                    آدرس</span
+                  >
+                  <span
+                    class="font-number text-white md:text-[16px]/[168%] text-[14px]"
+                    >تهران- خ شادمان</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- part 2  -->
+            <div
+              class="flex flex-col lg:flex-row justify-between px-[67.5px] max-w-[1120px] w-full mt-4 pb-4 border-b border-b-[#868686]"
+            >
+              <!-- 1 -->
+              <div class="lg:max-w-[407px] w-full mb-5 lg:mb-0">
+                <img src="./public/images/footer/Logo.png" alt="logo" />
+                <p
+                  class="text-white text-[14px]/[180%] font-estedad-regular mt-6"
+                >
+                  اتورنت با رویکرد اعتماد به مشتری، با در اختیار داشتن بزرگترین
+                  ناوگان خودرویی متشکل از انواع خودروهای صفر کیلومتر، اقتصادی تا
+                  تجاری در سراسر کشور ایران آماده خدمت‌رسانی به مشتریان است.
+                </p>
+              </div>
+              <!-- 2 -->
+              <div
+                class="flex flex-col gap-4 items-center lg:items-start text-white text-[14px]/[180%] font-estedad-regular"
+              >
+                <span class="mb-2">دسترسی آسان</span>
+                <span>سوالات متداول</span>
+                <span>تماس با ما</span>
+                <span>درباره ما</span>
+              </div>
+              <!-- 3 -->
+              <div class="max-w-[320px] w-full flex flex-col justify-center">
+                <h5
+                  class="text-white text-[16px]/[241%] font-estedad-medium mb-3"
+                >
+                  خبرنامه
+                </h5>
+                <form
+                  action="#"
+                  method="get"
+                  class="w-full flex justify-between items-center"
+                >
+                  <div
+                    class="w-full border border-[#C2C2C2] rounded-[6px] py-1 px-[6px] h-10 flex justify-between items-center"
+                  >
+                    <input
+                      class="w-[70%] h-full placeholder:text-[#C2C2C2] placeholder:text-[12px]/[15px] outline-none placeholder:font-estedad-regular placeholder:pb-7 text-white"
+                      type="email"
+                      placeholder="ایمیل خود را وارد کنید"
+                    />
+                    <button
+                      type="submit"
+                      class="max-w-[66px] w-[25%] h-full bg-[#FDB713] rounded-[6px] text-[14px]/[180%] font-estedad-medium text-[#212121]"
+                    >
+                      ارسال
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- wrapper of part 3  -->
+          <div class="flex justify-center items-end gap-2 h-[49px] w-full">
+            <img src="./public/images/footer/creative-commons.png" alt="cc" />
+            <p class="text-[#9A9A9A] text-[14px]/[180%] font-estedad-light">
+              تمامی حقوق این وبسایت متعلق به اتورنت می‌باشد
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <div
       id="greyBg"
-      class="hidden w-screen h-screen bg-black/45 absolute top-0 right-0 left-0"
+      class="hidden w-screen h-screen bg-black/45 fixed top-0 left-0"
     ></div>
     <!-- git hub calender  -->
     <script

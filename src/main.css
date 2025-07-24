@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 /* Estedad Variable Font Family */
 @font-face {
   font-family: "Estedad-black";
@@ -97,7 +98,7 @@
   --breakpoint-custom-md: 57rem; /* (width >= 57rem) 57 = 912px */
   --breakpoint-custom-lg: 73rem; /* (width >= 73rem) 73 = 1168px */
   --breakpoint-custom-xl: 83rem; /* (width >= 83rem) 83rem = 1328px */
-  --breakpoint-design: 90rem; /* (width >= 90rem) 90rem = 1440px UI design */ 
+  --breakpoint-design: 90rem; /* (width >= 90rem) 90rem = 1440px UI design */
 }
 
 /* customizing the search input in mobile  */
@@ -106,8 +107,7 @@
   line-height: 28px;
   align-items: center;
   position: relative;
- width: 100%;
-
+  width: 100%;
 }
 
 .search__input {
@@ -137,7 +137,6 @@
   background-color: #fff;
   box-shadow: 0 0 0 4px rgb(0 48 73 / 10%);
 }
-
 
 .icon {
   position: absolute;
@@ -182,8 +181,8 @@
   object-fit: cover;
 }
 /* golden star */
-.goldenStar{
-  fill:#FDB713;
+.goldenStar {
+  fill: #fdb713;
 }
 /* استایل هندل در صفحه ی reserve.html  */
 .noUi-handle {
@@ -282,11 +281,130 @@
   }
 }
 /* styling scroll bars  */
-.carCardsScrollBar{
+
+.carCardsScrollBar {
+
+  
+
+  /* For Firefox */
   scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+    
   direction: ltr;
-  .carCard{
+  .carCard {
     direction: rtl;
   }
 }
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+.carCardsScrollBar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.carCardsScrollBar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.carCardsScrollBar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background-color 0.3s ease;
+}
+
+.carCardsScrollBar::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+/* styling the thumb / draggable icon in reservePage  */
+
+.slider-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 0.5px solid #9a9a9a;
+  box-shadow: 0px 0px 0px 0px #00000008;
+
+  box-shadow: 1px 13px 30px 0px #00000008;
+
+  box-shadow: 4px 54px 54px 0px #00000008;
+
+  box-shadow: 8px 121px 73px 0px #00000005;
+
+  box-shadow: 15px 214px 86px 0px #00000000;
+
+  box-shadow: 23px 335px 94px 0px #00000000;
+
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;
+  z-index: 4;
+}
+.slider-thumb::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 0.5px solid #9a9a9a;
+  box-shadow: 0px 0px 0px 0px #00000008;
+
+  box-shadow: 1px 13px 30px 0px #00000008;
+
+  box-shadow: 4px 54px 54px 0px #00000008;
+
+  box-shadow: 8px 121px 73px 0px #00000005;
+
+  box-shadow: 15px 214px 86px 0px #00000000;
+
+  box-shadow: 23px 335px 94px 0px #00000000;
+
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;
+  z-index: 4;
+}
+.slider-thumb::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 0.5px solid #9a9a9a;
+  box-shadow: 0px 0px 0px 0px #00000008;
+
+  box-shadow: 1px 13px 30px 0px #00000008;
+
+  box-shadow: 4px 54px 54px 0px #00000008;
+
+  box-shadow: 8px 121px 73px 0px #00000005;
+
+  box-shadow: 15px 214px 86px 0px #00000000;
+
+  box-shadow: 23px 335px 94px 0px #00000000;
+
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;
+  z-index: 4;
+}
+ .slider-thumb:focus {
+      outline: none;
+    }
+    .slider-thumb::-ms-fill-lower {
+      background: transparent;
+    }
+    .slider-thumb::-ms-fill-upper {
+      background: transparent;
+    }
+    /* Hide the default track */
+    .slider-thumb::-webkit-slider-runnable-track {
+    
+      background: transparent;
+    }
+    .slider-thumb::-ms-tooltip {
+      display: none;
+    }
 

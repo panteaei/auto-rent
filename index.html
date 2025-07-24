@@ -29,10 +29,11 @@
       >
         <!-- nav bar  -->
         <nav
+          id="navBar"
           class="relative md:h-auto lg:h-24 xl:w-[1224px] w-full bg-white xl:rounded-b-[16px] rounded-none md:fixed md:top-0 md:right-0 md:left-0 lg:mx-[auto] flex justify-between items-center lg:px-8 md:py-[18.5px] py-3 md:px-6 px-4 mb-1.5 md:mb-0 md:shadow-2xs z-1000"
         >
           <!-- hamb icon for mobile -->
-          <div class="md:hidden block cursor-pointer" id="hamb">
+          <div class="hamb md:hidden block cursor-pointer">
             <img
               src="./public/images/header/hamburgerblue.png"
               alt="hamb icon"
@@ -44,16 +45,14 @@
           </div>
 
           <ul
-            id="menu"
-            class="flex flex-col md:flex-row md:items-center lg:gap-10 md:gap-3.5 text-sm lg:text-[16px] lg:leading-[100%] lg:font-estedad-light text-[#353535] absolute -right-full top-0 z-[10000] transition md:static bg-white h-screen md:h-auto w-[60%] sm:w-[50%] md:w-auto p-4 md:p-0"
+            class="menu flex flex-col md:flex-row md:items-center lg:gap-10 md:gap-3.5 text-sm lg:text-[16px] lg:leading-[100%] lg:font-estedad-light text-[#353535] absolute -right-full top-0 z-[10000] transition md:static bg-white h-screen md:h-auto w-[60%] sm:w-[50%] md:w-auto p-4 md:p-0"
           >
             <!-- first li is for mobile  -->
             <li
               class="md:hidden flex justify-between items-center border-b border-b-blue-100 pb-3 mb-3"
             >
               <img
-                id="xIcon"
-                class="w-4 h-4"
+                class="xIcon w-4 h-4"
                 src="./public/images/header/icons8-x-24.png"
                 alt="x icon"
               />
@@ -141,17 +140,15 @@
             </li>
             <li class="order-1 md:order-none hidden md:block hover:scale-110">
               <img
-                id="searchBtn"
-                class="w-6 h-6 cursor-pointer"
+                class="searchBtn w-6 h-6 cursor-pointer"
                 src="./public/images/header/search-outline.png"
                 alt="search button"
               />
             </li>
           </ul>
           <a
-            id="loginBox"
             href="#"
-            class="flex items-center gap-1 md:gap-0 md:block h-10 md:px-4 md:py-[6px] md:bg-[#194BF0] md:hover:bg-blue-600 rounded-lg font-estedad-light"
+            class="loginBox flex items-center gap-1 md:gap-0 md:block h-10 md:px-4 md:py-[6px] md:bg-[#194BF0] md:hover:bg-blue-600 rounded-lg font-estedad-light"
           >
             <span
               class="hidden md:inline-block text-[16px] md:text-white leading-6"
@@ -166,10 +163,9 @@
               alt="login icon"
             />
           </a>
-          <!-- wrapper for searching contents in desktop -->
+          <!-- search wrapper for contents in desktop -->
           <div
-            id="searchWrapper"
-            class="hidden absolute top-6 lg:left-[136px] lg:right-[206px] left-0 xl:w-[884px] custom-lg:w-[900px] lg:w-[690px] md:w-[563px] custom-md:w-[718px] xl:h-[333px] z-10000 flex-col gap-y-6 bg-white rounded-[16px] rounded-bl-[0px] lg:rounded-bl-[16px] p-4"
+            class="searchWrapper hidden fixed top-0 overflow-y-scroll lg:overflow-auto lg:absolute z-10001 lg:top-6 lg:left-[136px] lg:right-[206px] left-0 xl:w-[884px] custom-lg:w-[900px] lg:w-[690px] w-full h-[100vh] lg:h-auto flex-col gap-y-6 bg-white lg:rounded-[16px] p-4"
           >
             <form action="#" method="get" class="w-full">
               <div
@@ -193,23 +189,22 @@
             <!-- wrapper of history of searching and favorites  -->
             <div class="w-full">
               <!-- wrapper for search history  -->
-              <div class="w-full mb-[41px]" id="searchH">
+              <div class="searchH w-full mb-[41px]">
                 <div class="w-full flex items-center justify-between">
                   <div class="flex items-center gap-x-2">
                     <img src="./public/images/header/clock.png" alt="clock" />
-                    <spanc
+                    <span
                       class="text-[16px]/[100%] text-[#494949] font-estedad-medium"
-                      >تاریخچه جستجوهای شما</spanc
+                      >تاریخچه جستجوهای شما</span
                     >
                   </div>
                   <img
-                    id="bin"
                     src="./public/images/header/hugeicons_delete-02.png"
                     alt="icon"
-                    class="cursor-pointer"
+                    class="bin cursor-pointer"
                   />
                 </div>
-                <div class="mt-6 flex items-center gap-x-2">
+                <div class="mt-6 flex items-center gap-x-2 flex-wrap w-full">
                   <span
                     class="border border-[#F3F3F3] xl:px-[10px] px-[2px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer flex justify-between items-center"
                     >بنز S500</span
@@ -242,13 +237,13 @@
                       src="./public/images/header/heart-search.png"
                       alt="clock"
                     />
-                    <spanc
+                    <span
                       class="text-[16px]/[100%] text-[#494949] font-estedad-medium"
                       >جستجوهای پرطرفدار
-                    </spanc>
+                    </span>
                   </div>
                 </div>
-                <div class="mt-6 flex items-center gap-x-2">
+                <div class="mt-6 flex items-center gap-x-2 flex-wrap w-full">
                   <span
                     class="border border-[#F3F3F3] px-[10px] py-[7.5px] rounded-[32px] text-[14px]/[180%] text-[#5E5E5E] font-estedad-light cursor-pointer"
                   >
@@ -281,6 +276,19 @@
                   </span>
                 </div>
               </div>
+              <!-- btn for closing in tablet and mobile -->
+              <div id="closeBtn" class="w-full lg:hidden block">
+                <button
+                  class="bg-[#194BF0] px-3 py-1 rounded-[10px] mt-4"
+                  type="button"
+                >
+                  <span
+                    class="xs:text-[14px]/[24px] text-[12px]/[24px] font-estedad-light text-white transition-colors"
+                  >
+                    بستن</span
+                  >
+                </button>
+              </div>
             </div>
           </div>
         </nav>
@@ -290,7 +298,7 @@
         >
           <!-- search content -->
 
-          <div class="group-search">
+          <div id="group-search" class="group-search">
             <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
               <g>
                 <path
@@ -339,7 +347,7 @@
             <div class="md:flex md:gap-2 md:mt-4">
               <a
                 class="hidden md:inline-flex md:justify-center md:items-center md:gap-1.5 md:py-2 md:px-4 md:bg-[#FDB713] md:hover:bg-amber-500 md:rounded-md font-estedad-regular font-bold"
-                href="#"
+                href="./reserve.html"
               >
                 <img
                   src="./public/svgs/header/car.svg"
@@ -372,11 +380,11 @@
                   class="w-4 h-4"
                 />
               </a>
-              <!--resrve btn for mobile  -->
+              <!--reserve btn for mobile  -->
 
               <a
                 class="inline-flex md:hidden justify-center items-center gap-1.5 py-2 px-4 bg-[#FDB713] hover:bg-amber-300 transition-all rounded-[48px] font-estedad-regular xs:text-[11px] text-[10px] mt-3"
-                href="#"
+                href="./reserve.html"
               >
                 رزرو آسان خودرو
                 <img
@@ -389,7 +397,7 @@
           </div>
           <!-- reserving wrapper  -->
           <div
-            class="xl:absolute xl:-bottom-[100.5px] md:left-0 md:right-0 h-auto custom-md:h-[201px] xl:w-[1224px] w-full bg-white xl:rounded-[16px] rounded-none lg:mx-[auto] lg:px-6 md:py-6 p-3 md:px-6 mb-1.5 md:mb-0 mt-[10%] md:mt-[88px] lg:mt-[100px] xl:mt-0 md:shadow-2xs z-0"
+            class="xl:absolute xl:-bottom-[100.5px] md:left-0 md:right-0 h-auto custom-md:h-[201px] xl:w-[1224px] w-full bg-white xl:rounded-[16px] rounded-none lg:mx-[auto] lg:px-6 md:py-6 p-3 md:px-6 mb-1.5 md:mb-0 mt-[10%] md:mt-[88px] lg:mt-[100px] xl:mt-0 md:shadow-2xs z-10"
           >
             <!-- reserving content  -->
             <!-- first section  -->
@@ -422,13 +430,13 @@
               <!-- for tablet  -->
               <a
                 class="sm:hidden xs:block hidden h-[25px] text-[#194BF0] md:text-sm text-xs font-estedad-ExtraLight font-bold"
-                href="#"
+                href="./reserve.html"
                 >اطلاعات بیشتر</a
               >
               <!-- for small mobiles  -->
               <a
                 class="xs:hidden block h-[25px] text-[#194BF0] md:text-sm text-xs font-estedad-ExtraLight font-bold"
-                href="#"
+                href="./reserve.html"
               >
                 بیشتر</a
               >
@@ -503,7 +511,7 @@
                 <!-- location select  -->
                 <div
                   id="location__select"
-                  class="xl:w-[47%] sm:w-[30%] xs:w-[35%] w-[50%] h-[32px] md:h-auto lg:h-[32px] md:pl-3 md:pr-[14px] border-l border-l-[#D7D7D7] bg-white relative flex items-center mb-4 md:mb-0"
+                  class="xl:w-[47%] sm:w-[30%] xs:w-[35%] w-[50%] md:w-[200px] lg:w-[40%] h-[32px] md:h-auto lg:h-[32px] md:pl-3 md:pr-[14px] border-l border-l-[#D7D7D7] bg-white relative flex items-center mb-4 md:mb-0"
                 >
                   <input
                     id="location__input"
@@ -514,8 +522,7 @@
                     placeholder="تهران-فرودگاه امام خمینی"
                   />
                   <img
-                    id="location__arrow"
-                    class="absolute left-3 md:top-1 top-0 bottom-0 my-auto cursor-pointer transition-all w-3 h-3 xs:w-4 xs:h-4 md:w-auto md:h-auto"
+                    class="rotating__arrow absolute left-3 md:top-1 top-0 bottom-0 my-auto cursor-pointer transition-all w-3 h-3 md:w-2.5 md:h-2.5 xs:w-4 xs:h-4 lg:w-auto lg:h-auto"
                     src="./public/images/header/reserve/arrow-down.png"
                     alt="down arrow"
                   />
@@ -597,63 +604,65 @@
                     class="flex items-center justify-between w-full md:w-auto md:justify-normal md:gap-0"
                   >
                     <div
-                      class="relative md:px-3 md:border-l md:border-l-[#D7D7D7]"
+                      class="relative md:border-l md:border-l-[#D7D7D7] sm:w-[110px] md:w-[135px] w-[94px]"
                     >
                       <input
                         data-jdp
                         data-jdp-option-1
                         type="text"
-                        class="md:w-[111px] w-[94px] h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300"
+                        class="sm:px-3 px-2 w-full h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300"
                         placeholder="1403٫02٫10"
                       />
                       <img
-                        class="absolute left-3 top-0 bottom-0 my-auto w-4 xs:w-auto"
+                        class="absolute left-3 top-0 bottom-0 my-auto w-[15px] sm:w-auto"
                         src="./public/images/header/reserve/calendar.png"
                         alt="calender"
                       />
                     </div>
                     <div
-                      class="relative md:px-3 md:border-l md:border-l-[#D7D7D7]"
+                      class="relative md:border-l md:border-l-[#D7D7D7] md:w-[130px] sm:w-[100px] xs:w-[94px] w-[69px]"
                     >
                       <input
                         data-jdp
                         data-jdp-option-2
                         type="text"
-                        class="lg:w-[106px] md:w-[95px] xs:w-[94px] w-[69px] h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300"
+                        class="sm:px-3 px-2 w-full h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300"
                         placeholder="07:00"
                       />
                       <img
-                        class="absolute left-3 top-0 bottom-0 my-auto w-4 xs:w-auto"
+                        class="absolute left-3 top-0 bottom-0 my-auto w-[15px] sm:w-auto"
                         src="./public/images/header/reserve/clock.png"
                         alt="clock"
                       />
                     </div>
                     <div
-                      class="relative md:px-3 md:border-l md:border-l-[#D7D7D7]"
+                      class="relative md:border-l md:border-l-[#D7D7D7] md:w-[135px] sm:w-[110px] w-[94px]"
                     >
                       <input
                         data-jdp
                         data-jdp-option-3
                         type="text"
-                        class="md:w-[111px] w-[94px] h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300"
+                        class="sm:px-3 px-2 w-full h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300"
                         placeholder="1403٫02٫10"
                       />
                       <img
-                        class="absolute left-3 top-0 bottom-0 my-auto w-4 xs:w-auto"
+                        class="absolute left-3 top-0 bottom-0 my-auto w-[15px] sm:w-auto"
                         src="./public/images/header/reserve/calendar.png"
                         alt="calender"
                       />
                     </div>
-                    <div class="relative md:px-3">
+                    <div
+                      class="relative md:w-[130px] sm:w-[100px] xs:w-[94px] w-[69px]"
+                    >
                       <input
                         data-jdp
                         data-jdp-option-4
                         type="text"
-                        class="lg:w-[106px] md:w-[95px] xs:w-[94px] w-[69px] h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300"
+                        class="sm:px-3 px-2 w-full h-[31px] placeholder:font-number placeholder:text-[#212121] placeholder:md:text-[16px] placeholder:text-xs text-xs md:text-[16px] outline-blue-300"
                         placeholder="10:00"
                       />
                       <img
-                        class="absolute left-3 top-0 bottom-0 my-auto w-4 xs:w-auto"
+                        class="absolute left-3 top-0 bottom-0 my-auto w-[15px] sm:w-auto"
                         src="./public/images/header/reserve/clock.png"
                         alt="clock"
                       />
@@ -661,7 +670,7 @@
                   </div>
                   <button
                     type="submit"
-                    class="custom-md:block hidden w-[56px] h-[56px] bg-[#FDB713] rounded-[16px] p-4 cursor-pointer"
+                    class="custom-md:block hidden w-[56px] h-[56px] bg-[#FDB713] hover:bg-amber-300 cursor-pointer rounded-[16px] p-4"
                   >
                     <img
                       src="./public/images/header/reserve/search-normal.png"
@@ -672,7 +681,7 @@
                 <!-- another submit btn  -->
                 <button
                   type="submit"
-                  class="custom-md:hidden mx-auto mt-[10px] md:mt-5 xs:w-[103px] w-[87px] h-[36px] rounded-[16px] bg-[#FDB713] flex justify-center items-center"
+                  class="custom-md:hidden mx-auto mt-[10px] md:mt-5 xs:w-[103px] w-[87px] h-[36px] rounded-[16px] bg-[#FDB713] hover:bg-amber-300 cursor-pointer flex justify-center items-center"
                 >
                   <img
                     src="./public/images/header/reserve/search-normal.png"
@@ -1062,7 +1071,7 @@
                 />
               </div>
               <span
-                class="text-black text-[16px]/[140%] font-estedad-ExtraBold mb-2"
+                class="text-black text-[16px]/[140%] font-estedad-ExtraBold mb-2 line-clamp-1"
               >
                 اجاره تویوتا لندکروز در تهران 2013
               </span>
@@ -2260,19 +2269,20 @@
       </div>
     </footer>
     <div
-      id="greyBg"
-      class="hidden w-screen h-screen bg-black/45 fixed top-0 left-0"
+      class="greyBg hidden w-screen h-screen bg-black/45 fixed top-0 left-0 z-100"
     ></div>
     <!-- git hub calender  -->
     <script
       type="text/javascript"
       src="./jalalidatepicker/dist/jalalidatepicker.min.js"
     ></script>
-    <!-- header script  -->
-    <script src="./src/header.js"></script>
+    <!-- my header script  -->
+    <script src="./src/js/mainPage/header.js"></script>
     <!-- swiper script  -->
     <script src="./swiper/swiper-bundle.min.js"></script>
-    <!-- main script -->
-    <script src="./src/main.js"></script>
+    <!-- my main script -->
+    <script src="./src/js/mainPage/main.js"></script>
+    <!-- my all pages script  -->
+    <script src="./src/js/allPages/menu.js"></script>
   </body>
 </html>

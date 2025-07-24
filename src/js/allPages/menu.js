@@ -8,7 +8,7 @@ hambIcon.addEventListener("click", () => {
   menu.classList.remove("-right-full");
   menu.classList.add("right-0");
   greyBg.classList.remove("hidden");
-    // control scrolling
+  // control scrolling
   body.classList.add("overflow-hidden");
 });
 // click on x
@@ -17,7 +17,7 @@ xIcon.addEventListener("click", () => {
   menu.classList.remove("right-0");
   menu.classList.add("-right-full");
   greyBg.classList.add("hidden");
-      // control scrolling
+  // control scrolling
   body.classList.remove("overflow-hidden");
 });
 // click on body (greyBg)
@@ -41,7 +41,6 @@ searchBtn.addEventListener("click", () => {
   greyBg.classList.remove("hidden");
   // control scrolling
   body.classList.add("overflow-hidden");
-
 });
 
 // remove gray bg and seraching wrapper
@@ -54,10 +53,7 @@ greyBg.addEventListener("click", () => {
   menu.classList.remove("hidden");
   // control scrolling
   body.classList.remove("overflow-hidden");
-
- 
 });
-
 
 // deleting the search history
 let bin = document.querySelector(".bin");
@@ -66,24 +62,22 @@ bin.addEventListener("click", () => {
   searchH.classList.add("hidden");
 });
 //  آزمایشی فعلا هیستوری باشه
-searchH.classList.remove("hidden")
+searchH.classList.remove("hidden");
 
-// opening the search wrapper in mobile and tablet  
-let serachWMobile = document.querySelector("#group-search")
-serachWMobile.addEventListener("click" , ()=>{
-    searchW.classList.remove("hidden");
+// opening the search wrapper in mobile and tablet
+let serachWMobile = document.querySelector("#group-search");
+serachWMobile.addEventListener("click", () => {
+  searchW.classList.remove("hidden");
   searchW.classList.add("flex");
 
   // control scrolling
   body.classList.add("overflow-hidden");
-})
+});
 
-
-
-// closing the search wrapper in mobile and tablet with closing btn 
-let closeBtn = document.querySelector("#closeBtn")
-closeBtn.addEventListener("click" , ()=> {
-    greyBg.classList.add("hidden");
+// closing the search wrapper in mobile and tablet with closing btn
+let closeBtn = document.querySelector("#closeBtn");
+closeBtn.addEventListener("click", () => {
+  greyBg.classList.add("hidden");
   searchW.classList.remove("flex");
   searchW.classList.add("hidden");
   loginBox.classList.remove("md:hidden");
@@ -91,6 +85,4 @@ closeBtn.addEventListener("click" , ()=> {
   menu.classList.remove("hidden");
   // control scrolling
   body.classList.remove("overflow-hidden");
-})
-
-
+});

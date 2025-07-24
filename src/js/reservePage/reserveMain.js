@@ -77,13 +77,13 @@ let categoryWrapper = document.querySelector("#category");
 
 filterBtn.addEventListener("click", () => {
   // showing the category wrapper
- 
+
   categoryWrapper.classList.remove("-bottom-[100vh]");
   categoryWrapper.classList.add("bottom-0");
 
   // showing gray bg // this bg was declared in allPages js
   greyBg.classList.remove("hidden");
-     // control scrolling //this was declared in allPages js
+  // control scrolling //this was declared in allPages js
   body.classList.add("overflow-hidden");
 });
 // hiding the category wrapper
@@ -91,18 +91,17 @@ filterBtn.addEventListener("click", () => {
 greyBg.addEventListener("click", () => {
   categoryWrapper.classList.add("-bottom-[100vh]");
   categoryWrapper.classList.remove("bottom-0");
-     // control scrolling 
+  // control scrolling
   body.classList.remove("overflow-hidden");
 });
-// cross icon for closing the category wrapper 
-let xIcon2 = document.querySelector(".xIcon2")
+// cross icon for closing the category wrapper
+let xIcon2 = document.querySelector(".xIcon2");
 
 xIcon2.addEventListener("click", () => {
   categoryWrapper.classList.remove("bottom-0");
   categoryWrapper.classList.add("-bottom-[100vh]");
 
   greyBg.classList.add("hidden");
-      // control scrolling
+  // control scrolling
   body.classList.remove("overflow-hidden");
-
 });

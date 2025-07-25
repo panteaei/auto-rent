@@ -81,8 +81,7 @@ filterBtn.addEventListener("click", () => {
   categoryWrapper.classList.remove("-bottom-[100vh]");
   categoryWrapper.classList.add("bottom-0");
 
-  // showing gray bg // this bg was declared in allPages js
-  greyBg.classList.remove("hidden");
+ 
   // control scrolling //this was declared in allPages js
   body.classList.add("overflow-hidden");
 });
